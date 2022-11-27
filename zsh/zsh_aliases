@@ -1,8 +1,13 @@
+# vim
 alias v="nvim"
+
+# general
 alias ls="ls -GH"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+# git
 alias ga="git add"
 alias gdf="git diff"
 alias gst="git status"
@@ -11,11 +16,21 @@ alias gco="git checkout"
 alias gs="git switch"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-function gpu ()
+function gpu()
 {
   branch="$(git branch --show-current)"
   [[ -z $branch ]] && return
   git push --set-upstream origin $branch
 }
 
+# thefuck
 eval $(thefuck --alias)
+
+# docker
+function dc-fn() {
+  docker compose $*
+}
+alias dc="dc-fn"
+
+# kubernetes
+alias k="kubectl"

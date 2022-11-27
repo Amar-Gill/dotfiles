@@ -1,0 +1,6 @@
+require("amar.impatient")
+require("amar.set")
+require("amar.packer")
+require("amar.remap")
+require("amar.lsp")
+require("amar.colors")

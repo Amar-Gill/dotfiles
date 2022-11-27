@@ -6,12 +6,16 @@
 - clean: ['~']
 
 - link:
-    #zsh
+    # zsh
     ~/.zshrc:
       force: true
       path: zsh/zshrc
     ~/.zshenv: zsh/zshenv
     ~/.p10k.zsh: zsh/p10k.zsh
+    # nvim
+    ~/.config/nvim:
+      force: true
+      path: nvim
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

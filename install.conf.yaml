@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~']
+
+- link:
+    #zsh
+    ~/.zshrc:
+      force: true
+      path: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
+    ~/.p10k.zsh: zsh/p10k.zsh

@@ -34,3 +34,12 @@ alias dc="dc-fn"
 
 # kubernetes
 alias k="kubectl"
+
+function load-kubectl-autocompletion() {
+  [[ $commands[kubectl] ]] && kubectl completion zsh > $HOME/zsh_plugins/kubectl/_kubectl
+}
+
+function source-kubectl-autocompletion() {
+  [[ -f $HOME/zsh_plugins/kubectl/_kubectl ]] && source $HOME/zsh_plugins/kubectl/_kubectl && return
+  load-kubectl-autocompletion
+}

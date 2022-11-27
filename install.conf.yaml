@@ -12,3 +12,6 @@
       path: zsh/zshrc
     ~/.zshenv: zsh/zshenv
     ~/.p10k.zsh: zsh/p10k.zsh
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

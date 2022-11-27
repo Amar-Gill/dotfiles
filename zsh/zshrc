@@ -15,9 +15,10 @@ if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
 fi
 
-# case insensitive tab completion
+# tab completion: case insensitive, hyphen insensitive
 autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' special-dirs true
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 

@@ -15,7 +15,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.npm_groovy_lint,
-		formatting.beautysh,
+		formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),
 		formatting.gofmt,
 		diagnostics.eslint,
 		diagnostics.tidy,

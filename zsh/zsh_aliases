@@ -1,0 +1,21 @@
+alias v="nvim"
+alias ls="ls -GH"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ga="git add"
+alias gdf="git diff"
+alias gst="git status"
+alias gcmsg="git commit -m"
+alias gco="git checkout"
+alias gs="git switch"
+alias gp="git push"
+alias gpf="git push --force-with-lease"
+function gpu ()
+{
+  branch="$(git branch --show-current)"
+  [[ -z $branch ]] && return
+  git push --set-upstream origin $branch
+}
+
+eval $(thefuck --alias)

@@ -12,6 +12,7 @@
       path: zsh/zshrc
     ~/.zshenv: zsh/zshenv
     ~/.p10k.zsh: zsh/p10k.zsh
+    ~/.zsh_aliases: zsh/zsh_aliases
     # nvim
     ~/.config/nvim:
       force: true

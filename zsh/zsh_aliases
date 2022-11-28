@@ -26,6 +26,13 @@ function gpu()
 # thefuck
 eval $(thefuck --alias)
 
+# nvm lazy loader wrapper
+nvm() {
+  unset -f nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+  nvm $@
+}
+
 # docker
 function dc-fn() {
   docker compose $*

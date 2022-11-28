@@ -6,11 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 autoload -Uz compinit && compinit
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # aliases
 if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
@@ -22,6 +17,8 @@ zstyle ':completion:*' special-dirs true
 
 # sourced from .zsh_aliases
 source-kubectl-completion
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 

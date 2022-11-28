@@ -35,11 +35,20 @@ alias dc="dc-fn"
 # kubernetes
 alias k="kubectl"
 
-function load-kubectl-autocompletion() {
-  [[ $commands[kubectl] ]] && kubectl completion zsh > $HOME/zsh_plugins/kubectl/_kubectl
+# kubectl completion
+export KUBECTL_ZSH_COMPLETION_PATH=$HOME/.kubectl_zsh_completion
+
+# call this anytime refetch completion
+function load-kubectl-completion() {
+  [[ ! $commands[kubectl] ]] && return
+  kubectl completion zsh >| $KUBECTL_ZSH_COMPLETION_PATH
+  source $KUBECTL_ZSH_COMPLETION_PATH
+  echo "New kubectl completion file saved to $KUBECTL_ZSH_COMPLETION_PATH and ready to use."
 }
 
-function source-kubectl-autocompletion() {
-  [[ -f $HOME/zsh_plugins/kubectl/_kubectl ]] && source $HOME/zsh_plugins/kubectl/_kubectl && return
-  load-kubectl-autocompletion
+function source-kubectl-completion() {
+  [[ ! $commands[kubectl] ]] && return
+  [[ -f $KUBECTL_ZSH_COMPLETION_PATH ]] && source $KUBECTL_ZSH_COMPLETION_PATH && return
+  echo 'No kubectl completion file found. Fetching it now.'
+  load-kubectl-completion
 }

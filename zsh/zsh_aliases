@@ -27,7 +27,7 @@ function gpu()
 eval $(thefuck --alias)
 
 # nvm lazy loader wrapper
-nvm() {
+function nvm() {
   unset -f nvm
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
   nvm $@

@@ -42,9 +42,6 @@ alias dc="dc-fn"
 # kubernetes
 alias k="kubectl"
 
-# kubectl completion
-export KUBECTL_ZSH_COMPLETION_PATH=$HOME/.kubectl_zsh_completion
-
 # call this anytime refetch completion
 function load-kubectl-completion() {
   [[ ! $commands[kubectl] ]] && return

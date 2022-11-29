@@ -11,9 +11,14 @@ if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
 fi
 
+# https://thevaluable.dev/zsh-completion-guide-examples/
 # tab completion: case insensitive, hyphen insensitive
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' menu select
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' special-dirs true
+setopt MENU_COMPLETE
 
 source-kubectl-completion
 

@@ -11,6 +11,10 @@ if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
 fi
 
+if [ -f ~/.work_stuff.sh ]; then
+  . ~/.work_stuff.sh
+fi
+
 # https://thevaluable.dev/zsh-completion-guide-examples/
 # tab completion: case insensitive, hyphen insensitive
 zstyle ':completion:*' use-cache on

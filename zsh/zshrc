@@ -4,13 +4,10 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
 autoload -Uz compinit && compinit
 
-# aliases
-if [ -f ~/.zsh_aliases ]; then
-  . ~/.zsh_aliases
-fi
-
+source ~/.zsh_aliases
 source ~/.zsh_completion
 
 if [ -f ~/.work_stuff.sh ]; then

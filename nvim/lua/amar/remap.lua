@@ -20,6 +20,9 @@ nnoremap("m", "<C-w>l")
 vnoremap(">", ">gv")
 vnoremap("<", "<gv")
 
+nnoremap(">", ">>")
+nnoremap("<", "<<")
+
 -- move text up and down (MacOS)
 nnoremap("∆", ":m .+1<CR>") -- <A-j>
 nnoremap("˚", ":m .-2<CR>") -- <A-k>

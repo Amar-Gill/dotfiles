@@ -106,6 +106,12 @@ nnoremap("\\C", function()
 	})
 end)
 
+nnoremap("gr", function()
+	builtin.lsp_references({
+		initial_mode = "normal",
+	})
+end)
+
 nnoremap("\\b", function()
 	telescope.extensions.file_browser.file_browser({
 		path = "%:p:h",

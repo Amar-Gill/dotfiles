@@ -16,7 +16,7 @@ local servers = {
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
-	automatic_installation = true,
+	automatic_installation = { exclude = { "groovyls" } },
 })
 
 local on_attach = require("amar.lsp.handlers").on_attach

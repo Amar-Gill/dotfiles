@@ -1,5 +1,5 @@
-local null_ls_status_ok, null_ls = pcall(require, "null-ls")
-if not null_ls_status_ok then
+local status, null_ls = pcall(require, "null-ls")
+if not status then
 	return
 end
 
@@ -11,14 +11,14 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier,
+		formatting.prettierd,
 		formatting.stylua,
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.npm_groovy_lint,
+		formatting.npm_groovy_lint, -- not installed with mason
 		formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),
-		formatting.gofmt,
-		diagnostics.eslint,
-		diagnostics.tidy,
+		formatting.gofumpt,
+		diagnostics.eslint_d,
+		diagnostics.tidy, -- not installed with mason
 		diagnostics.flake8,
 		diagnostics.golangci_lint,
 	},

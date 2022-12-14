@@ -14,12 +14,13 @@ null_ls.setup({
 		formatting.prettierd,
 		formatting.stylua,
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.npm_groovy_lint, -- not installed with mason
 		formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),
 		formatting.gofumpt,
 		diagnostics.eslint_d,
-		diagnostics.tidy, -- not installed with mason
 		diagnostics.flake8,
 		diagnostics.golangci_lint,
+		-- not installed with mason
+		formatting.npm_groovy_lint,
+		diagnostics.tidy,
 	},
 })

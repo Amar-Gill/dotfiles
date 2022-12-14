@@ -3,6 +3,22 @@ if not status then
 	return
 end
 
+local servers = {
+	"sumneko_lua",
+	"html",
+	"tsserver",
+	"pyright",
+	"bashls",
+	"tailwindcss",
+	"gopls",
+}
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = servers,
+	automatic_installation = true,
+})
+
 local on_attach = require("amar.lsp.handlers").on_attach
 local capabilities = require("amar.lsp.handlers").capabilities
 
@@ -57,6 +73,7 @@ nvim_lsp.bashls.setup({
 	filetypes = { "sh", "zsh", "bash" },
 })
 
+-- special cases
 local groovyls_dir = os.getenv("HOME") .. "/groovy-language-server/build/libs/groovy-language-server-all.jar"
 nvim_lsp.groovyls.setup({
 	on_attach = on_attach,

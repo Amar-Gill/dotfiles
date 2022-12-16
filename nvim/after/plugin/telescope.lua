@@ -26,6 +26,8 @@ telescope.setup({
 				["/"] = function()
 					vim.cmd.startinsert()
 				end,
+				["<C-j>"] = actions.preview_scrolling_down,
+				["<C-k>"] = actions.preview_scrolling_up,
 			},
 		},
 	},

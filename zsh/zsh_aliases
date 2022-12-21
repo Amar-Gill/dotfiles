@@ -6,6 +6,11 @@ alias ls="ls -GH"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+function print-colors() {
+  for i in {0..255};
+  do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'};
+  done
+}
 
 # git
 alias ga="git add"

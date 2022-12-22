@@ -11,6 +11,7 @@ function print-colors() {
   do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'};
   done
 }
+alias src="source ~/.zshrc"
 
 # git
 alias ga="git add"

@@ -6,11 +6,6 @@ alias ls="ls -GH"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-function print-colors() {
-  for i in {0..255};
-  do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'};
-  done
-}
 alias src="source ~/.zshrc"
 
 # git
@@ -27,6 +22,13 @@ function gpu()
   branch="$(git branch --show-current)"
   [[ -z $branch ]] && return
   git push --set-upstream origin $branch
+}
+
+# utilities
+function colors256() {
+  for i in {0..255};
+  do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'};
+  done
 }
 
 # thefuck

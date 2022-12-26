@@ -56,6 +56,7 @@ telescope.setup({
 })
 
 telescope.load_extension("file_browser")
+telescope.load_extension("fzf")
 
 nnoremap("\\f", function()
 	builtin.find_files({
@@ -125,3 +126,10 @@ nnoremap("\\b", function()
 		layout_config = fb_layout_config,
 	})
 end)
+
+nnoremap("<leader>/", function()
+	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+		winblend = 10,
+		previewer = false,
+	}))
+end, { desc = "[/] Fuzzily search in current buffer]" })

@@ -46,14 +46,10 @@ packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Common utilities
 
 	-- color themes
-	use("kvrohit/rasmus.nvim")
 	use("lewpoly/sherbet.nvim")
 	use("kyazdani42/blue-moon")
-	use("numToStr/Sakura.nvim")
 	-- use("rose-pine/neovim")
 	use({ "Amar-Gill/rose-pine-neovim", branch = "add-new-variant" })
-	use("kvrohit/substrata.nvim")
-	use("kvrohit/mellow.nvim")
 
 	-- status line
 	use("nvim-lualine/lualine.nvim")

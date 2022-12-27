@@ -3,6 +3,7 @@ if not status then
 	return
 end
 
+local groovyls_dir = os.getenv("HOME") .. "/groovy-language-server/build/libs/groovy-language-server-all.jar"
 local servers = {
 	sumneko_lua = {
 		settings = {
@@ -33,11 +34,13 @@ local servers = {
 	},
 	tailwindcss = {},
 	gopls = {},
+	groovyls = {
+		cmd = { "java", "-jar", groovyls_dir },
+	},
 }
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = vim.tbl_keys(servers), -- TODO is this option required also?
 	automatic_installation = { exclude = { "groovyls" } },
 })
 
@@ -57,13 +60,6 @@ for server, server_opts in pairs(servers) do
 end
 
 -- special cases
-local groovyls_dir = os.getenv("HOME") .. "/groovy-language-server/build/libs/groovy-language-server-all.jar"
-nvim_lsp.groovyls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	cmd = { "java", "-jar", groovyls_dir },
-})
-
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "cadence",
 	callback = function()

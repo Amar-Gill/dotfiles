@@ -88,6 +88,7 @@ packer.startup(function(use)
 	-- syntax highlighting special cases
 	use("towolf/vim-helm") -- highlighting for helm charts which are Go templates disguised as .yaml files
 	use("Cian911/vim-cadence") -- cadence language (flow smart contracts)
+	use("jxnblk/vim-mdx-js")
 
 	-- auto close tags and brackets / parentheses
 	use("windwp/nvim-autopairs")

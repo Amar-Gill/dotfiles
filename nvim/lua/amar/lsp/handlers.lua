@@ -5,8 +5,7 @@ local M = {}
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
 		filter = function(client)
-			-- apply whatever logic you want (in this example, we'll only use null-ls)
-			return client.name == "null-ls"
+			return client.name == "null-ls" or client.name == "astro"
 		end,
 		bufnr = bufnr,
 		timeout_ms = 5000,

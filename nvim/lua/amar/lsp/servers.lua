@@ -37,6 +37,7 @@ local servers = {
 	groovyls = {
 		cmd = { "java", "-jar", groovyls_dir },
 	},
+	astro = {},
 }
 
 require("mason").setup()

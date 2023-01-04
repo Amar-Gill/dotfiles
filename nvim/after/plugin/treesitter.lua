@@ -32,6 +32,7 @@ ts.setup({
 		"bash",
 		"sql",
 		"java",
+		"astro",
 	},
 	autotag = {
 		enable = true,

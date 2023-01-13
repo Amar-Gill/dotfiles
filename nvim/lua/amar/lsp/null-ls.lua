@@ -11,7 +11,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettierd,
+		formatting.prettierd.with({ extra_filetypes = { "astro" } }),
 		formatting.stylua,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),

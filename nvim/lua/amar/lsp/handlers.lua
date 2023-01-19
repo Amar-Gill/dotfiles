@@ -23,6 +23,9 @@ local display_lsp_signature = function(bufnr)
 		handler_opts = {
 			border = "rounded",
 		},
+		floating_window = false,
+		toggle_key = "<C-s>",
+		hint_prefix = "🪁",
 	}, bufnr)
 end
 

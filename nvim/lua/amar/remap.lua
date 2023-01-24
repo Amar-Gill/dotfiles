@@ -11,10 +11,10 @@ nnoremap("<leader>w", "<C-w>c") -- close active window
 nnoremap("<leader>bg", ':exec &bg=="light" ? "set bg=dark" : "set bg=light" <CR>') -- toggle light / dark bg
 
 -- navigate between windows
-nnoremap("z", "<C-w>h")
+nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-j>", "<C-w>j")
 nnoremap("<C-k>", "<C-w>k")
-nnoremap("m", "<C-w>l")
+nnoremap("<C-l>", "<C-w>l")
 
 -- stay in visual mode when indenting blocks of text
 vnoremap(">", ">gv")

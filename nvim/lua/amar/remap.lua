@@ -29,10 +29,16 @@ nnoremap("˚", ":m .-2<CR>") -- <M-k>
 vnoremap("∆", ":m .+1<CR>gv") -- <M-j>
 vnoremap("˚", ":m .-2<CR>gv") -- <M-k>
 
-nnoremap("<M-j>", ":m .+1<CR>") -- <M-j>
-nnoremap("<M-k>", ":m .-2<CR>") -- <M-k>
-vnoremap("<M-j>", ":m .+1<CR>gv") -- <M-j>
-vnoremap("<M-k>", ":m .-2<CR>gv") -- <M-k>
+nnoremap("<M-j>", ":m .+1<CR>")
+nnoremap("<M-k>", ":m .-2<CR>")
+vnoremap("<M-j>", ":m .+1<CR>gv")
+vnoremap("<M-k>", ":m .-2<CR>gv")
+
+-- resize window with arrows
+nnoremap("<M-Up>", ":resize +2<CR>")
+nnoremap("<M-Down>", ":resize -2<CR>")
+nnoremap("<M-Left>", ":vertical resize -2<CR>")
+nnoremap("<M-Right>", ":vertical resize +2<CR>")
 
 -- clipboard remaps
 -- keep pasted value in clipboard when pasting over other text

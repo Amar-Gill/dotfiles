@@ -58,52 +58,52 @@ telescope.setup({
 telescope.load_extension("file_browser")
 telescope.load_extension("fzf")
 
-nnoremap("\\f", function()
+nnoremap("|", function()
 	builtin.find_files({
 		no_ignore = false,
 		hidden = true,
 	})
 end)
 
-nnoremap("\\r", function()
+nnoremap("<leader>rg", function()
 	builtin.live_grep()
 end)
 
-nnoremap("\\\\", function()
+nnoremap("<leader>bf", function()
 	builtin.buffers()
 end)
 
-nnoremap("\\t", function()
+nnoremap("<leader>t", function()
 	builtin.help_tags()
 end)
 
-nnoremap("|", function()
+nnoremap("<leader>\\", function()
 	builtin.resume()
 end)
 
-nnoremap("\\d", function()
+nnoremap("<leader>ld", function()
 	builtin.diagnostics({
 		initial_mode = "normal",
 	})
 end)
 
-nnoremap("\\ls", function()
+nnoremap("<leader>ds", function()
 	builtin.lsp_document_symbols()
 end)
 
-nnoremap("\\s", function()
+nnoremap("<leader>gs", function()
 	builtin.git_status({
 		initial_mode = "normal",
 	})
 end)
 
-nnoremap("\\c", function()
+nnoremap("<leader>cm", function()
 	builtin.git_commits({
 		initial_mode = "normal",
 	})
 end)
 
-nnoremap("\\C", function()
+nnoremap("<leader>bcm", function()
 	builtin.git_bcommits({
 		initial_mode = "normal",
 	})
@@ -115,7 +115,7 @@ nnoremap("gr", function()
 	})
 end)
 
-nnoremap("\\b", function()
+nnoremap("\\", function()
 	telescope.extensions.file_browser.file_browser({
 		path = "%:p:h",
 		cwd = telescope_buffer_dir(),

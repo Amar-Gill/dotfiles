@@ -15,6 +15,7 @@ local fb_actions = telescope.extensions.file_browser.actions
 local fb_layout_config = {
 	height = vim.api.nvim_get_option("lines") - 8,
 	width = vim.api.nvim_get_option("columns") - 8,
+	prompt_position = "top",
 }
 
 telescope.setup({
@@ -36,6 +37,7 @@ telescope.setup({
 			-- disables netrw and use telescope-file-browser in its place
 			hijack_netrw = true,
 			layout_config = fb_layout_config,
+			sorting_strategy = "ascending",
 			mappings = {
 				-- your custom insert mode mappings
 				["i"] = {

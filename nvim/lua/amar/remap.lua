@@ -5,16 +5,17 @@ local xnoremap = Remap.xnoremap
 
 nnoremap("<leader>bd", "<cmd>bd<CR>") -- delete current buffer
 
-nnoremap("<leader>v", "<cmd>vsplit<CR>") -- new vertical window
-nnoremap("<leader>w", "<C-w>c") -- close active window
+nnoremap("<leader>vs", "<cmd>vsplit<CR>") -- new vertical window
+nnoremap("<leader>hs", "<cmd>split<CR>") -- new horizontal window
+nnoremap("<leader>wd", "<C-w>c") -- close active window
 
 nnoremap("<leader>bg", ':exec &bg=="light" ? "set bg=dark" : "set bg=light" <CR>') -- toggle light / dark bg
 
 -- navigate between windows
-nnoremap("<C-h>", "<C-w>h")
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
-nnoremap("<C-l>", "<C-w>l")
+nnoremap("<leader>wh", "<C-w>h")
+nnoremap("<leader>wj", "<C-w>j")
+nnoremap("<leader>wk", "<C-w>k")
+nnoremap("<leader>wl", "<C-w>l")
 
 -- stay in visual mode when indenting blocks of text
 vnoremap(">", ">gv")

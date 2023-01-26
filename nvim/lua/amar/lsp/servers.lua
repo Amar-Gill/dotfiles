@@ -40,6 +40,7 @@ local servers = {
 	astro = {},
 	svelte = {},
 	solargraph = {},
+	volar = {},
 }
 
 require("mason").setup()

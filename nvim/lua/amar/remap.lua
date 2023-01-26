@@ -3,7 +3,21 @@ local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local xnoremap = Remap.xnoremap
 
+local function delete_all_bufs_skip_current()
+	local current_bufnr = vim.api.nvim_get_current_buf()
+	local bufnrs = vim.api.nvim_list_bufs()
+	for _, bufnr in pairs(bufnrs) do
+		if bufnr ~= current_bufnr then
+			pcall(vim.api.nvim_buf_delete, bufnr, { force = false })
+		end
+	end
+	vim.schedule(function()
+		vim.cmd("mode")
+	end)
+end
+
 nnoremap("<leader>bd", "<cmd>bd<CR>") -- delete current buffer
+nnoremap("<leader>bad", delete_all_bufs_skip_current) -- delete all buffers except current
 
 nnoremap("<leader>vs", "<cmd>vsplit<CR>") -- new vertical window
 nnoremap("<leader>hs", "<cmd>split<CR>") -- new horizontal window

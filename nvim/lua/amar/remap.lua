@@ -60,4 +60,4 @@ nnoremap("<M-Right>", ":vertical resize +2<CR>")
 vnoremap("p", '"_dP')
 xnoremap("p", '"_dP')
 
-nnoremap("<leader>h", "<cmd>set hlsearch!<CR>") -- toggle highlight search
+nnoremap("<leader>hl", "<cmd>set hlsearch!<CR>") -- toggle highlight search

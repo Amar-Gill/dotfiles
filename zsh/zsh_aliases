@@ -98,3 +98,11 @@ for lazy_conda_alias in $lazy_conda_aliases
 do
   alias $lazy_conda_alias="load_conda && $lazy_conda_alias"
 done
+
+# Ruby and rbenv
+function rbenv() {
+  unset -f rbenv
+  eval "$(rbenv init - zsh)"
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
+  rbenv $@
+}

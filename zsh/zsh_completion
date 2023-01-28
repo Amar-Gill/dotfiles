@@ -8,4 +8,6 @@ zstyle ':completion:*' special-dirs true
 setopt MENU_COMPLETE
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source '/opt/homebrew/Cellar/rbenv/1.2.0/libexec/../completions/rbenv.zsh' # rbenv completion
+
+local rbenv_completion='/opt/homebrew/Cellar/rbenv/1.2.0/libexec/../completions/rbenv.zsh'
+[ -s $rbenv_completion ] && source $rbenv_completion # rbenv completion

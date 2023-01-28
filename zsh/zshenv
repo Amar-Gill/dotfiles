@@ -6,7 +6,7 @@ export PATH=$PATH:$GOPATH/bin
 export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:/opt/homebrew/opt/openssl@3/bin" # used by rbenv
-export PATH="$PATH:$HOME/.rbenv/bin"
+export PATH="$HOME/.rbenv/shims:${PATH}"
 
 export KUBECTL_ZSH_COMPLETION_PATH=$HOME/.kubectl_zsh_completion # kubectl completionn
 

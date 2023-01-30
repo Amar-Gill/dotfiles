@@ -19,8 +19,6 @@ end
 nnoremap("<leader>bd", "<cmd>bd<CR>") -- delete current buffer
 nnoremap("<leader>bad", delete_all_bufs_skip_current) -- delete all buffers except current
 
-nnoremap("<leader>vs", "<cmd>vsplit<CR>") -- new vertical window
-nnoremap("<leader>hs", "<cmd>split<CR>") -- new horizontal window
 nnoremap("<leader>wd", "<C-w>c") -- close active window
 
 nnoremap("<leader>bg", ':exec &bg=="light" ? "set bg=dark" : "set bg=light" <CR>') -- toggle light / dark bg

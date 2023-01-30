@@ -10,6 +10,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	debug = false,
+	border = "rounded",
 	sources = {
 		formatting.prettierd.with({ extra_filetypes = { "astro" } }),
 		formatting.stylua,

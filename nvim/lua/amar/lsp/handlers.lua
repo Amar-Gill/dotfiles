@@ -2,6 +2,14 @@ local nnoremap = require("amar.keymap").nnoremap
 
 local M = {}
 
+local lsp_handler_config = {
+	border = "rounded",
+	style = "minimal",
+}
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp_handler_config)
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp_handler_config)
+
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
 		filter = function(client)
@@ -30,7 +38,6 @@ local display_lsp_signature = function(bufnr)
 end
 
 local lsp_keymaps = function(bufnr)
-	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 	nnoremap("gD", vim.lsp.buf.declaration, bufopts)

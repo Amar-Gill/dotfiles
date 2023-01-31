@@ -3,6 +3,8 @@ if not status then
 	return
 end
 
+require("lspconfig.ui.windows").default_options.border = "rounded"
+
 local groovyls_dir = os.getenv("HOME") .. "/groovy-language-server/build/libs/groovy-language-server-all.jar"
 local servers = {
 	sumneko_lua = {

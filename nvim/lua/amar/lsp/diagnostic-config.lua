@@ -11,9 +11,10 @@ end
 
 local config = {
 	virtual_text = true,
-	signs = {
-		active = signs,
-	},
+	-- signs = {
+	-- 	active = signs,
+	-- },
+	signs = false,
 	update_in_insert = true,
 	underline = true,
 	severity_sort = true,

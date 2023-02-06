@@ -19,15 +19,9 @@ end
 nnoremap("<leader>bd", "<cmd>bd<CR>") -- delete current buffer
 nnoremap("<leader>bad", delete_all_bufs_skip_current) -- delete all buffers except current
 
-nnoremap("<leader>wd", "<C-w>c") -- close active window
+nnoremap("<leader>w", "<C-w>") -- remap for window commands
 
 nnoremap("<leader>bg", ':exec &bg=="light" ? "set bg=dark" : "set bg=light" <CR>') -- toggle light / dark bg
-
--- navigate between windows
-nnoremap("<leader>wh", "<C-w>h")
-nnoremap("<leader>wj", "<C-w>j")
-nnoremap("<leader>wk", "<C-w>k")
-nnoremap("<leader>wl", "<C-w>l")
 
 -- stay in visual mode when indenting blocks of text
 vnoremap(">", ">gv")

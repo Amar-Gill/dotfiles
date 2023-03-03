@@ -32,8 +32,8 @@ nnoremap("<", "<<")
 
 nnoremap("<M-j>", ":m .+1<CR>")
 nnoremap("<M-k>", ":m .-2<CR>")
-vnoremap("<M-j>", ":m .+1<CR>gv")
-vnoremap("<M-k>", ":m .-2<CR>gv")
+vnoremap("<M-j>", ":m '>+1<CR><esc>gv")
+vnoremap("<M-k>", ":m '<-2<CR><esc>gv")
 
 -- resize window with arrows
 nnoremap("<M-Up>", ":resize +2<CR>")

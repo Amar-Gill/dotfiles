@@ -30,12 +30,6 @@ vnoremap("<", "<gv")
 nnoremap(">", ">>")
 nnoremap("<", "<<")
 
--- move text up and down (MacOS)
-nnoremap("∆", ":m .+1<CR>") -- <M-j>
-nnoremap("˚", ":m .-2<CR>") -- <M-k>
-vnoremap("∆", ":m .+1<CR>gv") -- <M-j>
-vnoremap("˚", ":m .-2<CR>gv") -- <M-k>
-
 nnoremap("<M-j>", ":m .+1<CR>")
 nnoremap("<M-k>", ":m .-2<CR>")
 vnoremap("<M-j>", ":m .+1<CR>gv")

@@ -34,6 +34,8 @@ ts.setup({
 		"java",
 		"astro",
 		"ruby",
+		"elixir",
+		"hcl",
 	},
 	autotag = {
 		enable = true,

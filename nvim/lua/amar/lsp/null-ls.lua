@@ -24,6 +24,8 @@ null_ls.setup({
 		diagnostics.standardrb,
 		-- not installed with mason
 		formatting.npm_groovy_lint,
+		formatting.mix,
 		diagnostics.tidy,
+		diagnostics.credo,
 	},
 })

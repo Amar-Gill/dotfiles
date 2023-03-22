@@ -1,5 +1,6 @@
 # vim
 alias v="nvim"
+alias gsv="git status -s | awk '{print $2}' | xargs nvim"
 
 # general
 alias ls="ls -GH"

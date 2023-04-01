@@ -98,6 +98,8 @@ packer.startup(function(use)
 	use("nvim-telescope/telescope-file-browser.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", cond = vim.fn.executable("make") == 1 })
 
+	use("lukas-reineke/indent-blankline.nvim") -- draw vertical indent lines
+
 	use("akinsho/nvim-bufferline.lua")
 
 	use("norcalli/nvim-colorizer.lua")

@@ -44,6 +44,7 @@ local servers = {
 	solargraph = {},
 	volar = {},
 	elixirls = {},
+	helm_ls = {},
 }
 
 require("mason").setup({

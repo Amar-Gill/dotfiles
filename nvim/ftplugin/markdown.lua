@@ -1,1 +1,1 @@
-vim.o.sidescroll = 0
+vim.opt_local.sidescroll = 0

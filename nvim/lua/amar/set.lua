@@ -15,7 +15,7 @@ vim.opt.inccommand = "split"
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
-vim.opt.sidescroll = 0
+vim.opt.sidescroll = 12
 
 vim.g.mapleader = " "
 

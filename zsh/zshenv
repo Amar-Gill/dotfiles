@@ -12,4 +12,5 @@ export KUBECTL_ZSH_COMPLETION_PATH=$HOME/.kubectl_zsh_completion # kubectl compl
 
 export LSCOLORS=Gxfxcxdxbxegedabagacad # https://geoff.greer.fm/lscolors/
 
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3" # used by rbenv
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/homebrew/opt/openssl@3/lib/pkgconfig:/opt/homebrew/opt/readline/lib/pkgconfig" # used by rbenv

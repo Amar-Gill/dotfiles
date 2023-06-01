@@ -47,7 +47,9 @@ packer.startup(function(use)
 
 	-- color themes
 	use("lewpoly/sherbet.nvim")
-	use("kyazdani42/blue-moon")
+	use("olivercederborg/poimandres.nvim")
+	use("mhartington/oceanic-next")
+	use("sainnhe/edge")
 	-- use("rose-pine/neovim")
 	use({ "Amar-Gill/rose-pine-neovim", branch = "add-new-variant" })
 

@@ -45,6 +45,7 @@ local servers = {
 	volar = {},
 	elixirls = {},
 	helm_ls = {},
+	prismals = {},
 }
 
 require("mason").setup({

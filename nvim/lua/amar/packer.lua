@@ -66,7 +66,7 @@ packer.startup(function(use)
 	use("ray-x/lsp_signature.nvim") -- show lsp signature in insert mode when calling a function
 	use("folke/neodev.nvim") -- annotations for vim and plugins (requires sumneko_lua ls)
 	use({ "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" }) -- external dependencies manager
-	use("j-hui/fidget.nvim") -- LSP status updates
+	use({ "j-hui/fidget.nvim", tag = "legacy" }) -- LSP status updates
 
 	-- completion
 	use("hrsh7th/nvim-cmp") -- The completion plugin

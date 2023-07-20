@@ -35,6 +35,11 @@ nnoremap("<M-k>", ":m .-2<CR>")
 vnoremap("<M-j>", ":m '>+1<CR><esc>gv")
 vnoremap("<M-k>", ":m '<-2<CR><esc>gv")
 
+-- quickfix list
+nnoremap("]q", ":cnext<CR>")
+nnoremap("[q", ":cprev<CR>")
+nnoremap("<leader>q", ":cclose<CR>")
+
 -- resize window with arrows
 nnoremap("<M-Up>", ":resize +2<CR>")
 nnoremap("<M-Down>", ":resize -2<CR>")

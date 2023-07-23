@@ -75,7 +75,7 @@ nnoremap("<leader>bf", function()
 	builtin.buffers()
 end)
 
-nnoremap("<leader>t", function()
+nnoremap("<leader>tg", function()
 	builtin.help_tags()
 end)
 
@@ -83,7 +83,7 @@ nnoremap("<leader>\\", function()
 	builtin.resume()
 end)
 
-nnoremap("<leader>ld", function()
+nnoremap("<leader>td", function()
 	builtin.diagnostics({
 		initial_mode = "normal",
 	})
@@ -111,7 +111,7 @@ nnoremap("<leader>bcm", function()
 	})
 end)
 
-nnoremap("gr", function()
+nnoremap("tr", function()
 	builtin.lsp_references({
 		initial_mode = "normal",
 	})

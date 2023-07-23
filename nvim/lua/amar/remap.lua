@@ -38,7 +38,7 @@ vnoremap("<M-k>", ":m '<-2<CR><esc>gv")
 -- quickfix list
 nnoremap("]q", ":cnext<CR>")
 nnoremap("[q", ":cprev<CR>")
-nnoremap("<leader>q", ":cclose<CR>")
+nnoremap("<leader>cq", ":cclose<CR>")
 
 -- resize window with arrows
 nnoremap("<M-Up>", ":resize +2<CR>")

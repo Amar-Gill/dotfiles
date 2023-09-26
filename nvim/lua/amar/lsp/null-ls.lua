@@ -13,6 +13,7 @@ null_ls.setup({
 	border = "rounded",
 	sources = {
 		formatting.prettierd.with({ extra_filetypes = { "astro", "svelte" } }),
+		formatting.eslint_d,
 		formatting.stylua,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.beautysh.with({ extra_args = { "--indent-size", "2" } }),

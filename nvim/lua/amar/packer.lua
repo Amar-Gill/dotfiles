@@ -94,6 +94,9 @@ packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
+	-- auto conversion of f strings (js/ts and python)
+	use("chrisgrieser/nvim-puppeteer")
+
 	-- fuzzy finder
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")

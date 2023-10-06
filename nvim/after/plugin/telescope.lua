@@ -120,11 +120,9 @@ end)
 nnoremap("\\", function()
 	telescope.extensions.file_browser.file_browser({
 		path = "%:p:h",
-		cwd = telescope_buffer_dir(),
 		respect_gitignore = false,
 		hidden = true,
 		grouped = true,
-		initial_mode = "normal",
 		layout_config = fb_layout_config,
 	})
 end)

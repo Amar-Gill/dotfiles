@@ -16,5 +16,3 @@ bufferline.setup({
 
 nnoremap("<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
 nnoremap("<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
-nnoremap("<C-s>", "<Cmd>BufferLineCycleNext<CR>", {})
-nnoremap("<C-a>", "<Cmd>BufferLineCyclePrev<CR>", {})

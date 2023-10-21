@@ -12,6 +12,7 @@ alias src="source ~/.zshrc"
 # git
 alias ga="git add"
 alias gdf="git diff"
+alias gdfs="git diff --staged"
 alias gst="git status"
 alias gcmsg="git commit -m"
 alias gco="git checkout"
@@ -41,6 +42,10 @@ function nvm() {
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
   nvm $@
 }
+
+# node
+alias pn="pnpm"
+alias pnx="pnpx"
 
 # docker
 function dc-fn() {

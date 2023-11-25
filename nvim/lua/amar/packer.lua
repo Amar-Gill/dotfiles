@@ -124,6 +124,8 @@ packer.startup(function(use)
 	-- copilot
 	use("github/copilot.vim")
 
+	use("folke/zen-mode.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

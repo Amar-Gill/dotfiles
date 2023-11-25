@@ -3,6 +3,10 @@ if not status then
 	return
 end
 
+require("ts_context_commentstring").setup({
+	enable_autocmd = false,
+})
+
 ts.setup({
 	highlight = {
 		enable = true,
@@ -42,10 +46,6 @@ ts.setup({
 	},
 	autopairs = {
 		enable = true,
-	},
-	context_commentstring = {
-		enable = true,
-		enable_autocmd = false,
 	},
 })
 

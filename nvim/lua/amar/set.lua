@@ -2,7 +2,7 @@ vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 16
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -24,7 +24,7 @@ vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 
 vim.opt.laststatus = 3
 

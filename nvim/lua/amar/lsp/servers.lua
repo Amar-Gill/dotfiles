@@ -52,7 +52,7 @@ require("mason").setup({
 	ui = { border = "rounded" },
 })
 require("mason-lspconfig").setup({
-	automatic_installation = { exclude = { "groovyls" } },
+	automatic_installation = { exclude = { "groovyls", "gopls", "solargraph" } },
 })
 
 local on_attach = require("amar.lsp.handlers").on_attach

@@ -11,3 +11,8 @@ setopt MENU_COMPLETE
 
 local rbenv_completion='/opt/homebrew/Cellar/rbenv/1.2.0/libexec/../completions/rbenv.zsh'
 [ -s $rbenv_completion ] && source $rbenv_completion # rbenv completion
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi

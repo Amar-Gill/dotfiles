@@ -16,7 +16,7 @@ fi
 
 if type brew &>/dev/null
 then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-  local rbenv_completion='$(brew --cellar)/rbenv/1.2.0/libexec/../completions/rbenv.zsh'
+  FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
+  local rbenv_completion="$HOMEBREW_CELLAR/rbenv/1.2.0/libexec/../completions/rbenv.zsh"
   [ -s $rbenv_completion ] && source $rbenv_completion
 fi

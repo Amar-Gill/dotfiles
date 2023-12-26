@@ -18,6 +18,9 @@
     ~/.config/nvim:
       force: true
       path: nvim
+    ~/zsh-completions:
+      force: true
+      path: zsh-completions
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -12,10 +12,10 @@ if [ -d $zsh_completions_dir ]; then
   FPATH="$zsh_completions_dir/src:${FPATH}"
 fi
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 local rbenv_completion='/opt/homebrew/Cellar/rbenv/1.2.0/libexec/../completions/rbenv.zsh'
-[ -s $rbenv_completion ] && source $rbenv_completion # rbenv completion
+[ -s $rbenv_completion ] && source $rbenv_completion
 
 if type brew &>/dev/null
 then

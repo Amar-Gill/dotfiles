@@ -14,10 +14,9 @@ fi
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-local rbenv_completion='/opt/homebrew/Cellar/rbenv/1.2.0/libexec/../completions/rbenv.zsh'
-[ -s $rbenv_completion ] && source $rbenv_completion
-
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  local rbenv_completion='$(brew --cellar)/rbenv/1.2.0/libexec/../completions/rbenv.zsh'
+  [ -s $rbenv_completion ] && source $rbenv_completion
 fi

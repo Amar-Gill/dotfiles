@@ -1,11 +1,16 @@
 # https://thevaluable.dev/zsh-completion-guide-examples/
 # tab completion: case insensitive, hyphen insensitive
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' menu select
-zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' special-dirs true
-setopt MENU_COMPLETE
+# zstyle ':completion:*' use-cache on
+# zstyle ':completion:*' menu select
+# zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
+# zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+# zstyle ':completion:*' special-dirs true
+# setopt MENU_COMPLETE
+
+local zsh_completions_dir="/Users/$(whoami)/zsh-completions" 
+if [ -d $zsh_completions_dir ]; then
+  FPATH="$zsh_completions_dir/src:${FPATH}"
+fi
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

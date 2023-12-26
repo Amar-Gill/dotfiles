@@ -2,3 +2,7 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "zsh-completions"]
+	path = zsh-completions
+	url = git@github.com:zsh-users/zsh-completions.git
+	ignore = dirty

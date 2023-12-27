@@ -82,7 +82,7 @@ function load_conda() {
     unalias $lazy_conda_alias
   done
 
-  __conda_prefix="/opt/homebrew/Caskroom/mambaforge/base"
+  __conda_prefix="$HOMEBREW_PREFIX/Caskroom/mambaforge/base"
 
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
@@ -110,9 +110,9 @@ done
 # Ruby and rbenv
 function rbenv() {
   unset -f rbenv
-  export PATH="$PATH:/opt/homebrew/opt/openssl@3/bin"
-  export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/homebrew/opt/openssl@3/lib/pkgconfig:/opt/homebrew/opt/readline/lib/pkgconfig"
+  export PATH="$PATH:$HOMEBREW_PREFIX/opt/openssl@3/bin"
+  export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$HOMEBREW_PREFIX/opt/openssl@3/lib/pkgconfig:$HOMEBREW_PREFIX/opt/readline/lib/pkgconfig"
   eval "$(rbenv init - zsh)"
-  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3"
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$HOMEBREW_PREFIX/opt/openssl@3"
   rbenv $@
 }

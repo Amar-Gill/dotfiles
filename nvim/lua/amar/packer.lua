@@ -61,7 +61,7 @@ packer.startup(function(use)
 	-- LSP config
 	use("neovim/nvim-lspconfig") -- enable lsp
 	use("onsails/lspkind-nvim") -- vscode-like pictograms
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 	use("ray-x/lsp_signature.nvim") -- show lsp signature in insert mode when calling a function
 	use("folke/neodev.nvim") -- annotations for vim and plugins (requires sumneko_lua ls)
 	use({ "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" }) -- external dependencies manager

@@ -116,8 +116,6 @@ packer.startup(function(use)
 
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
 
-	use("lewis6991/impatient.nvim")
-
 	-- breadcrumbs
 	use("SmiteshP/nvim-navic")
 

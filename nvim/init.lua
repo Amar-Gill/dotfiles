@@ -1,4 +1,4 @@
-require("amar.impatient")
+vim.loader.enable()
 require("amar.set")
 require("amar.packer")
 require("amar.remap")

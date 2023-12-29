@@ -39,7 +39,7 @@ return {
 	-- treesitter (syntax parsing)
 	{
 		"nvim-treesitter/nvim-treesitter",
-		build = "TSUpdate",
+		build = ":TSUpdate",
 	},
 	"JoosepAlviste/nvim-ts-context-commentstring",
 

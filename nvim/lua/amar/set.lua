@@ -40,13 +40,4 @@ vim.opt.updatetime = 300
 
 vim.g.skip_ts_context_commentstring_module = true
 
-local get_winbar = function()
-	local s = "%t"
-	local status = pcall(require, "nvim-navic")
-	if status then
-		return s .. " %{%v:lua.require'nvim-navic'.get_location()%}"
-	end
-	return s
-end
-
-vim.o.winbar = get_winbar()
+vim.o.winbar = "%t %{%v:lua.require'nvim-navic'.get_location()%}"

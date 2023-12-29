@@ -12,7 +12,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 
 	-- icons
-	"kyazdani42/nvim-web-devicons",
+	"nvim-tree/nvim-web-devicons",
 
 	-- LSP config
 	"neovim/nvim-lspconfig", -- enable lsp

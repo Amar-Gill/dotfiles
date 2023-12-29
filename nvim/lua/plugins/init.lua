@@ -61,7 +61,7 @@ return {
 
 	"lukas-reineke/indent-blankline.nvim", -- draw vertical indent lines
 
-	"akinsho/nvim-bufferline.lua",
+	{ "akinsho/bufferline.nvim", version = "*" },
 
 	"norcalli/nvim-colorizer.lua",
 
@@ -71,7 +71,7 @@ return {
 	-- comments
 	"numToStr/Comment.nvim",
 
-	{ "akinsho/toggleterm.nvim", tag = "*" },
+	{ "akinsho/toggleterm.nvim", version = "*" },
 
 	-- breadcrumbs
 	"SmiteshP/nvim-navic",

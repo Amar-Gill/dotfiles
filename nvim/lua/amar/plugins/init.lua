@@ -22,7 +22,7 @@ return {
 	"folke/neodev.nvim", -- annotations for vim and plugins (requires sumneko_lua ls)
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim", -- external dependencies manager
-	{ "j-hui/fidget.nvim", tag = "legacy" }, -- LSP status updates
+	{ "j-hui/fidget.nvim", tag = "legacy", enabled = false }, -- LSP status updates
 
 	-- completion
 	"hrsh7th/nvim-cmp", -- The completion plugin

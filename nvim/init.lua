@@ -1,6 +1,6 @@
 vim.loader.enable()
 require("amar.set")
-require("amar.packer")
+require("amar.lazy")
 require("amar.remap")
 require("amar.ft-add")
 require("amar.autocmds")

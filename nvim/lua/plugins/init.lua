@@ -63,7 +63,7 @@ return {
 
 	{ "akinsho/bufferline.nvim", version = "*" },
 
-	"norcalli/nvim-colorizer.lua",
+	"NvChad/nvim-colorizer.lua",
 
 	-- git
 	"lewis6991/gitsigns.nvim",

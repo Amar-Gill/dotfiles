@@ -4,5 +4,5 @@ if not status then
 end
 
 colorizer.setup({
-	"*",
+	user_default_options = { tailwind = true, mode = "virtualtext" },
 })

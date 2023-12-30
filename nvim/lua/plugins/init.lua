@@ -13,11 +13,6 @@ return {
 	-- auto conversion of f strings (js/ts and python)
 	"chrisgrieser/nvim-puppeteer",
 
-	-- fuzzy finder
-	"nvim-telescope/telescope.nvim",
-	"nvim-telescope/telescope-file-browser.nvim",
-	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make", enabled = vim.fn.executable("make") == 1 },
-
 	"lukas-reineke/indent-blankline.nvim", -- draw vertical indent lines
 
 	{ "akinsho/bufferline.nvim", version = "*" },

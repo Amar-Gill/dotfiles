@@ -72,7 +72,14 @@ nnoremap("<leader>rg", function()
 end)
 
 nnoremap("<leader>bf", function()
-	builtin.buffers()
+	builtin.buffers({
+		previewer = false,
+		sorting_strategy = "ascending",
+		layout_config = {
+			prompt_position = "top",
+			width = 0.37,
+		},
+	})
 end)
 
 nnoremap("<leader>tg", function()

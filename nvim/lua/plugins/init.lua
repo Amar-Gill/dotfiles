@@ -24,21 +24,8 @@ return {
 	"williamboman/mason-lspconfig.nvim", -- external dependencies manager
 	{ "j-hui/fidget.nvim" }, -- LSP status updates
 
-
-	-- treesitter (syntax parsing)
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
-	"JoosepAlviste/nvim-ts-context-commentstring",
-
-	-- syntax highlighting special cases
-	"towolf/vim-helm", -- highlighting for helm charts which are Go templates disguised as .yaml files
-	"Cian911/vim-cadence", -- cadence language (flow smart contracts)
-
 	-- auto close tags and brackets / parentheses
 	{ "windwp/nvim-autopairs", event = "InsertEnter" },
-	"windwp/nvim-ts-autotag",
 
 	-- auto conversion of f strings (js/ts and python)
 	"chrisgrieser/nvim-puppeteer",

@@ -7,16 +7,6 @@ return {
 	-- icons
 	"nvim-tree/nvim-web-devicons",
 
-	-- LSP config
-	"neovim/nvim-lspconfig", -- enable lsp
-	"onsails/lspkind-nvim", -- vscode-like pictograms
-	"nvimtools/none-ls.nvim",
-	"ray-x/lsp_signature.nvim", -- show lsp signature in insert mode when calling a function
-	"folke/neodev.nvim", -- annotations for vim and plugins (requires sumneko_lua ls)
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim", -- external dependencies manager
-	{ "j-hui/fidget.nvim" }, -- LSP status updates
-
 	-- auto close tags and brackets / parentheses
 	{ "windwp/nvim-autopairs", event = "InsertEnter" },
 
@@ -41,9 +31,6 @@ return {
 	"numToStr/Comment.nvim",
 
 	{ "akinsho/toggleterm.nvim", version = "*" },
-
-	-- breadcrumbs
-	"SmiteshP/nvim-navic",
 
 	-- copilot
 	"github/copilot.vim",

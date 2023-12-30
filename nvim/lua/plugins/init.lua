@@ -48,7 +48,7 @@ return {
 	"Cian911/vim-cadence", -- cadence language (flow smart contracts)
 
 	-- auto close tags and brackets / parentheses
-	"windwp/nvim-autopairs",
+	{ "windwp/nvim-autopairs", event = "InsertEnter" },
 	"windwp/nvim-ts-autotag",
 
 	-- auto conversion of f strings (js/ts and python)

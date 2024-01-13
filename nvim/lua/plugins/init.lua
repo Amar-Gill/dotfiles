@@ -15,7 +15,7 @@ return {
 
 	"lukas-reineke/indent-blankline.nvim", -- draw vertical indent lines
 
-	{ "akinsho/bufferline.nvim", version = "*" },
+	{ "akinsho/bufferline.nvim", version = "*", enabled = false },
 
 	"NvChad/nvim-colorizer.lua",
 

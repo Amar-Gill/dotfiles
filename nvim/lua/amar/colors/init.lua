@@ -1,4 +1,3 @@
-require("amar.colors.rose-pine")
 require("amar.colors.edge")
 
 vim.o.background = "dark" -- or "light" for light mode

@@ -7,7 +7,9 @@ return {
 
 	{ "akinsho/bufferline.nvim", version = "*", enabled = false },
 
-	"NvChad/nvim-colorizer.lua",
+	{ "NvChad/nvim-colorizer.lua", opts = {
+		user_default_options = { tailwind = true, mode = "virtualtext" },
+	} },
 
 	"folke/zen-mode.nvim",
 

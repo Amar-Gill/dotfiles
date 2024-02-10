@@ -3,7 +3,9 @@ return {
 
 	"nvim-tree/nvim-web-devicons",
 
-	"lukas-reineke/indent-blankline.nvim",
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
+		indent = { char = "┊" },
+	} },
 
 	{
 		"akinsho/bufferline.nvim",

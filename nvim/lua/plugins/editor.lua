@@ -5,7 +5,19 @@ return {
 
 	"lukas-reineke/indent-blankline.nvim",
 
-	{ "akinsho/bufferline.nvim", version = "*", enabled = false },
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		enabled = false,
+		opts = {
+			options = {
+				show_buffer_close_icons = false,
+				show_close_icon = false,
+				color_icons = true,
+				always_show_bufferline = false,
+			},
+		},
+	},
 
 	{ "NvChad/nvim-colorizer.lua", opts = {
 		user_default_options = { tailwind = true, mode = "virtualtext" },

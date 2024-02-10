@@ -3,7 +3,10 @@ return {
 	{ "windwp/nvim-autopairs", event = "InsertEnter" },
 
 	-- auto conversion of f strings (js/ts and python)
-	"chrisgrieser/nvim-puppeteer",
+	{
+		"chrisgrieser/nvim-puppeteer",
+		lazy = false, -- plugin lazy-loads itself. Can also load on filetypes.
+	},
 
 	-- comments
 	{

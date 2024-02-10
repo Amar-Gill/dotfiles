@@ -48,7 +48,17 @@ return {
 		},
 	},
 
-	"nvim-tree/nvim-web-devicons",
+	{
+		"nvim-tree/nvim-web-devicons",
+		opts = {
+			-- your personnal icons can go here (to override)
+			-- DevIcon will be appended to `name`
+			override = {},
+			-- globally enable default icons (default to false)
+			-- will get overriden by `get_icons` option
+			default = true,
+		},
+	},
 
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
 		indent = { char = "┊" },

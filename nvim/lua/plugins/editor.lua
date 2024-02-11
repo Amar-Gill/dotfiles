@@ -82,7 +82,7 @@ return {
 		user_default_options = { tailwind = true, mode = "virtualtext" },
 	} },
 
-	{ "folke/zen-mode.nvim" },
+	{ "folke/zen-mode.nvim", event = { "VeryLazy" } },
 
 	-- markdown preview
 	{

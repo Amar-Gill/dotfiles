@@ -8,6 +8,7 @@ return {
 			"hrsh7th/cmp-buffer", -- buffer completions
 			"hrsh7th/cmp-path", -- path completions
 			"hrsh7th/cmp-cmdline", -- command line completions
+			"onsails/lspkind-nvim", -- vscode-like pictograms
 		},
 	},
 

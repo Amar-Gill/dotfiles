@@ -50,6 +50,7 @@ return {
 
 	{
 		"nvim-tree/nvim-web-devicons",
+		lazy = true,
 		opts = {
 			-- your personnal icons can go here (to override)
 			-- DevIcon will be appended to `name`

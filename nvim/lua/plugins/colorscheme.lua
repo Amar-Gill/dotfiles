@@ -1,5 +1,4 @@
 return {
-	{ "olivercederborg/poimandres.nvim", lazy = true },
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -19,4 +18,5 @@ return {
 	},
 	{ "folke/tokyonight.nvim", lazy = true },
 	{ "projekt0n/github-nvim-theme", lazy = true },
+	{ "olivercederborg/poimandres.nvim", lazy = true },
 }

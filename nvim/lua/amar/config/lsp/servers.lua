@@ -1,7 +1,4 @@
-local status, nvim_lsp = pcall(require, "lspconfig")
-if not status then
-	return
-end
+local nvim_lsp = require("lspconfig")
 
 require("lspconfig.ui.windows").default_options.border = "rounded"
 

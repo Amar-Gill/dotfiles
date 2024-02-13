@@ -21,12 +21,7 @@ local lsp_formatting = function(bufnr)
 end
 
 local display_lsp_signature = function(bufnr)
-	local status, lsp_signature = pcall(require, "lsp_signature")
-	if not status then
-		return
-	end
-
-	lsp_signature.on_attach({
+	require("lsp_signature").on_attach({
 		bind = true,
 		handler_opts = {
 			border = "rounded",
@@ -77,10 +72,7 @@ end
 
 -- allows for context aware breadcrumbs
 local breadcrumbs = function(client, bufnr)
-	local status, navic = pcall(require, "nvim-navic")
-	if not status then
-		return
-	end
+	local navic = require("nvim-navic")
 
 	if client.server_capabilities.documentSymbolProvider then
 		navic.setup({

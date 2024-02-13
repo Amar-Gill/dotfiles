@@ -6,6 +6,9 @@ return {
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			"windwp/nvim-ts-autotag",
 		},
+		config = function()
+			require("amar.config.treesitter")
+		end,
 	},
 
 	-- syntax highlighting special cases

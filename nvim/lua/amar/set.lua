@@ -41,5 +41,3 @@ vim.opt.smartcase = true
 vim.opt.updatetime = 300
 
 vim.g.skip_ts_context_commentstring_module = true
-
-vim.o.winbar = "%t %{%v:lua.require'nvim-navic'.get_location()%}"

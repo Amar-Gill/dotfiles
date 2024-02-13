@@ -1,9 +1,4 @@
-local status, lspkind = pcall(require, "lspkind")
-if not status then
-	return
-end
-
-lspkind.init({
+require("lspkind").init({
 	-- defines how annotations are shown
 	-- default: symbol
 	-- options: 'text', 'text_symbol', 'symbol_text', 'symbol'

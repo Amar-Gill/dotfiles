@@ -1,13 +1,8 @@
-local status, ts = pcall(require, "nvim-treesitter.configs")
-if not status then
-	return
-end
-
 require("ts_context_commentstring").setup({
 	enable_autocmd = false,
 })
 
-ts.setup({
+require("nvim-treesitter.configs").setup({
 	highlight = {
 		enable = true,
 		disable = {},

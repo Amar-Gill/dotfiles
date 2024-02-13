@@ -1,7 +1,5 @@
 return {
-	{ "lewpoly/sherbet.nvim", lazy = true },
 	{ "olivercederborg/poimandres.nvim", lazy = true },
-	{ "mhartington/oceanic-next", lazy = true },
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",

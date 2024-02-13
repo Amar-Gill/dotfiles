@@ -55,8 +55,8 @@ require("mason-lspconfig").setup({
 	automatic_installation = { exclude = { "groovyls", "gopls", "solargraph" } },
 })
 
-local on_attach = require("amar.lsp.handlers").on_attach
-local capabilities = require("amar.lsp.handlers").capabilities
+local on_attach = require("amar.config.lsp.handlers").on_attach
+local capabilities = require("amar.config.lsp.handlers").capabilities
 
 for server, server_opts in pairs(servers) do
 	local base_opts = {

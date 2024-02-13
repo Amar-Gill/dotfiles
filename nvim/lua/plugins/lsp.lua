@@ -9,6 +9,9 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"j-hui/fidget.nvim", -- LSP status updates
 		},
+    config = function()
+      require("amar.config.lsp")
+    end
 	},
 
 	-- breadcrumbs

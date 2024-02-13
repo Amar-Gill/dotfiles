@@ -6,7 +6,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			dark_variant = "moon",
+			-- dark_variant = "moon",
 			groups = {
 				git_change = "gold",
 				git_add = "pine",

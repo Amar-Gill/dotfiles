@@ -12,6 +12,6 @@ return {
 	},
 
 	-- syntax highlighting special cases
-	{ "towolf/vim-helm" }, -- highlighting for helm charts which are Go templates disguised as .yaml files
-	{ "Cian911/vim-cadence" }, -- cadence language (flow smart contracts)
+	{ "towolf/vim-helm", event = "VeryLazy" }, -- highlighting for helm charts which are Go templates disguised as .yaml files
+	{ "Cian911/vim-cadence", ft = "cadence" }, -- cadence language (flow smart contracts)
 }

@@ -10,16 +10,6 @@ local lsp_handler_config = {
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp_handler_config)
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp_handler_config)
 
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
-		filter = function(client)
-			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
-		timeout_ms = 5000,
-	})
-end
-
 local display_lsp_signature = function(bufnr)
 	require("lsp_signature").on_attach({
 		bind = true,
@@ -44,9 +34,6 @@ local lsp_keymaps = function(bufnr)
 	nnoremap("<leader>rn", vim.lsp.buf.rename, bufopts)
 	nnoremap("<leader>ca", vim.lsp.buf.code_action, bufopts)
 	nnoremap("gr", vim.lsp.buf.references, bufopts)
-	nnoremap("<leader>f", function()
-		lsp_formatting(bufnr)
-	end, bufopts)
 
 	local diagnostic_move_opts = { border = "rounded", float = false }
 
@@ -127,22 +114,7 @@ local lsp_highlights = function(client, bufnr)
 	end
 end
 
--- if you want to set up formatting on save, you can use this as a callback
-local formatting_augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
 M.on_attach = function(client, bufnr)
-	-- formatting on save
-	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = formatting_augroup, buffer = bufnr })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = formatting_augroup,
-			buffer = bufnr,
-			callback = function()
-				lsp_formatting(bufnr)
-			end,
-		})
-	end
-
 	lsp_keymaps(bufnr)
 	lsp_highlights(client, bufnr)
 	display_lsp_signature(bufnr)

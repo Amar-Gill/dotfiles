@@ -12,10 +12,18 @@ return {
 					javascript = { { "prettierd", "prettier" }, "eslint_d" },
 					typescript = { { "prettierd", "prettier" }, "eslint_d" },
 					go = { "gofumpt" },
+					zsh = { "beautysh" },
+					bash = { "beautysh" },
+					sh = { "beautysh" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
 					lsp_fallback = true,
+				},
+				formatters = {
+					beautysh = {
+						prepend_args = { "--indent-size", "2" },
+					},
 				},
 			})
 

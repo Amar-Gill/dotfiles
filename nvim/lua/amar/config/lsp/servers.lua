@@ -27,6 +27,7 @@ local servers = {
 	},
 	html = {},
 	tsserver = {},
+	eslint = {},
 	pyright = {},
 	bashls = {
 		filetypes = { "sh", "zsh", "bash" },

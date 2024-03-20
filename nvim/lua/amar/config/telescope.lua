@@ -64,6 +64,10 @@ nnoremap("|", function()
 	})
 end)
 
+nnoremap("<leader>pwr", function()
+	builtin.grep_string()
+end)
+
 nnoremap("<leader>rg", function()
 	builtin.live_grep()
 end)

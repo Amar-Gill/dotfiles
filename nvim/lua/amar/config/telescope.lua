@@ -141,3 +141,10 @@ nnoremap("<leader>/", function()
 		previewer = false,
 	}))
 end, { desc = "[/] Fuzzily search in current buffer]" })
+
+nnoremap("<leader>ht", builtin.help_tags, { desc = "Search [H]elp [T]ags" })
+
+-- Shortcut for searching your Neovim configuration files
+nnoremap("<leader>nc", function()
+	builtin.find_files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "Search [N]eovim [C]onfig" })

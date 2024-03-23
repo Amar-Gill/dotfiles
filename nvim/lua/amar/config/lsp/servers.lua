@@ -2,7 +2,18 @@ local nvim_lsp = require("lspconfig")
 
 require("lspconfig.ui.windows").default_options.border = "rounded"
 
+require("mason").setup({
+	ui = { border = "rounded" },
+})
+require("mason-lspconfig").setup({
+	automatic_installation = { exclude = { "groovyls", "gopls", "solargraph" } },
+})
+local mason_registry = require("mason-registry")
+
+local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+	.. "/node_modules/@vue/language-server"
 local groovyls_dir = os.getenv("HOME") .. "/groovy-language-server/build/libs/groovy-language-server-all.jar"
+
 local servers = {
 	lua_ls = {
 		settings = {
@@ -26,7 +37,17 @@ local servers = {
 		},
 	},
 	html = {},
-	tsserver = {},
+	tsserver = {
+		init_options = {
+			plugins = {
+				{
+					name = "@vue/typescript-plugin",
+					location = vue_language_server_path,
+					languages = { "vue" },
+				},
+			},
+		},
+	},
 	eslint = {},
 	pyright = {},
 	bashls = {
@@ -40,18 +61,17 @@ local servers = {
 	astro = {},
 	svelte = {},
 	solargraph = {},
-	volar = {},
+	volar = {
+		init_options = {
+			vue = {
+				hybridMode = false,
+			},
+		},
+	},
 	elixirls = {},
 	helm_ls = {},
 	prismals = {},
 }
-
-require("mason").setup({
-	ui = { border = "rounded" },
-})
-require("mason-lspconfig").setup({
-	automatic_installation = { exclude = { "groovyls", "gopls", "solargraph" } },
-})
 
 local on_attach = require("amar.config.lsp.handlers").on_attach
 local capabilities = require("amar.config.lsp.handlers").capabilities

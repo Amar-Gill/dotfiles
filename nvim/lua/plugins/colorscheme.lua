@@ -19,4 +19,5 @@ return {
 	{ "folke/tokyonight.nvim", lazy = true, opts = { style = "night" } },
 	{ "projekt0n/github-nvim-theme", lazy = true },
 	{ "olivercederborg/poimandres.nvim", lazy = true },
+	{ "catppuccin/nvim", name = "catppuccin", lazy = true },
 }

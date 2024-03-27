@@ -47,6 +47,7 @@ local servers = {
 				},
 			},
 		},
+		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 	},
 	eslint = {},
 	pyright = {},
@@ -61,13 +62,7 @@ local servers = {
 	astro = {},
 	svelte = {},
 	solargraph = {},
-	volar = {
-		init_options = {
-			vue = {
-				hybridMode = false,
-			},
-		},
-	},
+	volar = {},
 	elixirls = {},
 	helm_ls = {},
 	prismals = {},

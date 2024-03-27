@@ -59,6 +59,11 @@ end
 
 -- allows for context aware breadcrumbs
 local breadcrumbs = function(client, bufnr)
+	-- https://github.com/SmiteshP/nvim-navic/issues/89
+	if client.name == "volar" then
+		return
+	end
+
 	local navic = require("nvim-navic")
 
 	if client.server_capabilities.documentSymbolProvider then

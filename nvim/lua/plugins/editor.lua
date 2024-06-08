@@ -97,6 +97,14 @@ return {
 			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
 		end,
 	},
+	{
+		"MeanderingProgrammer/markdown.nvim",
+		name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("render-markdown").setup({})
+		end,
+	},
 
 	{
 		"akinsho/toggleterm.nvim",

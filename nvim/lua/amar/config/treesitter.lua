@@ -22,6 +22,7 @@ require("nvim-treesitter.configs").setup({
 		"go",
 		"gomod",
 		"markdown",
+		"markdown_inline",
 		"python",
 		"svelte",
 		"vue",

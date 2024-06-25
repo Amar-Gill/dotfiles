@@ -73,40 +73,6 @@ function source-kubectl-completion() {
   load-kubectl-completion
 }
 
-# Python and Conda
-lazy_conda_aliases=('python' 'conda' 'mamba')
-
-function load_conda() {
-  for lazy_conda_alias in $lazy_conda_aliases
-  do
-    unalias $lazy_conda_alias
-  done
-
-  __conda_prefix="$HOMEBREW_PREFIX/Caskroom/mambaforge/base"
-
-  # >>> conda initialize >>>
-  # !! Contents within this block are managed by 'conda init' !!
-  __conda_setup="$("$__conda_prefix/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-  else
-    if [ -f "$__conda_prefix/etc/profile.d/conda.sh" ]; then
-      . "$__conda_prefix/etc/profile.d/conda.sh"
-    else
-      export PATH="$__conda_prefix/bin:$PATH"
-    fi
-  fi
-  unset __conda_setup
-  # <<< conda initialize <<<
-
-  unfunction load_conda
-}
-
-for lazy_conda_alias in $lazy_conda_aliases
-do
-  alias $lazy_conda_alias="load_conda && $lazy_conda_alias"
-done
-
 # Ruby and rbenv
 function rbenv() {
   unset -f rbenv

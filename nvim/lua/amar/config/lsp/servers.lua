@@ -67,6 +67,7 @@ local servers = {
 	helm_ls = {},
 	prismals = {},
 	yamlls = {},
+	zls = {},
 }
 
 local on_attach = require("amar.config.lsp.handlers").on_attach

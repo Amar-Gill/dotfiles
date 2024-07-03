@@ -36,6 +36,7 @@ require("nvim-treesitter.configs").setup({
 		"ruby",
 		"elixir",
 		"hcl",
+		"zig",
 	},
 	autotag = {
 		enable = true,

@@ -7,11 +7,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 zstyle ':completion:*' special-dirs true
 setopt MENU_COMPLETE
 
-local zsh_completions_dir="/Users/$(whoami)/zsh-completions" 
-if [ -d $zsh_completions_dir ]; then
-  FPATH="$zsh_completions_dir/src:${FPATH}"
-fi
-
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 if type brew &>/dev/null

@@ -6,7 +6,7 @@ require("mason").setup({
 	ui = { border = "rounded" },
 })
 require("mason-lspconfig").setup({
-	automatic_installation = { exclude = { "groovyls", "gopls", "solargraph" } },
+	automatic_installation = { exclude = { "groovyls", "gopls", "solargraph", "rust-analyzer" } },
 })
 local mason_registry = require("mason-registry")
 

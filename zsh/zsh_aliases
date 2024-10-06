@@ -7,6 +7,7 @@ alias vl="nvim -c 'set bg=light'"
 alias gsv="git status -s | awk '{print \$2}' | fzf | xargs nvim"
 alias gsvl="git status -s | awk '{print \$2}' | fzf | xargs nvim -c 'set bg=light'"
 alias vf="nvim -c 'Telescope find_files'"
+alias vrg="nvim -c 'Telescope live_grep'"
 
 # general
 alias ls="ls -GH"

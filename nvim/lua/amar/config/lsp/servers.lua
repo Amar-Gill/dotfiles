@@ -37,7 +37,7 @@ local servers = {
 		},
 	},
 	html = {},
-	tsserver = {
+	ts_ls = {
 		init_options = {
 			plugins = {
 				{

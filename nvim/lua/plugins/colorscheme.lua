@@ -13,10 +13,10 @@ return {
 		},
 		config = function(_, opts)
 			require("rose-pine").setup(opts)
-			vim.cmd([[colorscheme rose-pine]])
+			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
-	{ "folke/tokyonight.nvim", lazy = true, opts = { style = "night" } },
+	{ "folke/tokyonight.nvim", lazy = true, opts = { style = "storm" } },
 	{ "projekt0n/github-nvim-theme", lazy = true },
 	{ "olivercederborg/poimandres.nvim", lazy = true },
 	{

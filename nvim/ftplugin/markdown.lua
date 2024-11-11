@@ -1,1 +1,1 @@
-vim.opt_local.sidescroll = 0
+vim.opt.wrap = true

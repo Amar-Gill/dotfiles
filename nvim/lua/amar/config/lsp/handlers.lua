@@ -18,7 +18,7 @@ local display_lsp_signature = function(bufnr)
 		},
 		floating_window = false,
 		toggle_key = "<C-s>",
-		hint_prefix = "🌊 ",
+		hint_prefix = "🌗 ",
 	}, bufnr)
 end
 

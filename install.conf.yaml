@@ -18,6 +18,10 @@
     ~/.config/nvim:
       force: true
       path: nvim
+    # ghostty
+    ~/.config/ghostty:
+      force: true
+      path: ghostty
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

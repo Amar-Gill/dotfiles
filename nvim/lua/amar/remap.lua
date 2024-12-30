@@ -3,6 +3,12 @@ local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local xnoremap = Remap.xnoremap
 
+local function edit_ghostty_config()
+	vim.cmd([[ e ~/dotfiles/ghostty/config ]])
+end
+
+nnoremap("<leader>gho", edit_ghostty_config)
+
 local function delete_all_bufs_skip_current()
 	local current_bufnr = vim.api.nvim_get_current_buf()
 	local bufnrs = vim.api.nvim_list_bufs()

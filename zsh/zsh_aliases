@@ -26,6 +26,8 @@ alias gco="git checkout"
 alias gs="git switch"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
+alias gca="git commit --amend"
+alias grh='function _grh() { git reset HEAD~${1:-1}; }; _grh'
 function gpu()
 {
   local current_branch="$(git branch --show-current)"

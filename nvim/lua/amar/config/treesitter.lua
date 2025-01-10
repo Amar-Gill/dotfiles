@@ -2,6 +2,8 @@ require("ts_context_commentstring").setup({
 	enable_autocmd = false,
 })
 
+require("nvim-ts-autotag").setup()
+
 require("nvim-treesitter.configs").setup({
 	highlight = {
 		enable = true,
@@ -37,9 +39,6 @@ require("nvim-treesitter.configs").setup({
 		"elixir",
 		"hcl",
 		"zig",
-	},
-	autotag = {
-		enable = true,
 	},
 	autopairs = {
 		enable = true,

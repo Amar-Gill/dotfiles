@@ -101,7 +101,7 @@ nnoremap("<leader>ds", function()
 	builtin.lsp_document_symbols()
 end)
 
-nnoremap("<leader>gs", function()
+nnoremap("<leader>gst", function()
 	builtin.git_status({
 		initial_mode = "normal",
 	})

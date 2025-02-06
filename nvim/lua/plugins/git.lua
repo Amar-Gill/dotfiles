@@ -65,6 +65,18 @@ return {
 					return "<Ignore>"
 				end, { expr = true })
 
+				nnoremap("<leader>gsrh", function()
+					vim.schedule(function()
+						gs.reset_hunk()
+					end)
+				end)
+
+				nnoremap("<leader>gsrb", function()
+					vim.schedule(function()
+						gs.reset_buffer()
+					end)
+				end)
+
 				nnoremap("gp", function()
 					gs.preview_hunk()
 				end)

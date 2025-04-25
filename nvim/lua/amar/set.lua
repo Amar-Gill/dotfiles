@@ -1,5 +1,7 @@
 vim.o.background = "dark"
 
+vim.o.winborder = "rounded"
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true

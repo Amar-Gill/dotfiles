@@ -2,14 +2,6 @@ local nnoremap = require("amar.keymap").nnoremap
 
 local M = {}
 
-local lsp_handler_config = {
-	border = "rounded",
-	style = "minimal",
-}
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp_handler_config)
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp_handler_config)
-
 local display_lsp_signature = function(bufnr)
 	require("lsp_signature").on_attach({
 		bind = true,
@@ -27,7 +19,6 @@ local lsp_keymaps = function(bufnr)
 
 	nnoremap("gD", vim.lsp.buf.declaration, bufopts)
 	nnoremap("gd", vim.lsp.buf.definition, bufopts)
-	nnoremap("K", vim.lsp.buf.hover, bufopts)
 	nnoremap("gi", vim.lsp.buf.implementation, bufopts)
 	nnoremap("gs", vim.lsp.buf.signature_help, bufopts)
 	nnoremap("<leader>D", vim.lsp.buf.type_definition, bufopts)
@@ -35,22 +26,8 @@ local lsp_keymaps = function(bufnr)
 	nnoremap("<leader>ca", vim.lsp.buf.code_action, bufopts)
 	nnoremap("gr", vim.lsp.buf.references, bufopts)
 
-	local diagnostic_move_opts = { border = "rounded", float = false }
-
 	nnoremap("gld", function()
-		vim.diagnostic.open_float({ border = "rounded" })
-	end, bufopts)
-	nnoremap("]d", function()
-		vim.schedule(function()
-			vim.diagnostic.goto_next(diagnostic_move_opts)
-			vim.cmd.normal("zz")
-		end)
-	end, bufopts)
-	nnoremap("[d", function()
-		vim.schedule(function()
-			vim.diagnostic.goto_prev(diagnostic_move_opts)
-			vim.cmd.normal("zz")
-		end)
+		vim.diagnostic.open_float()
 	end, bufopts)
 	nnoremap("<leader>q", function()
 		vim.diagnostic.setloclist()

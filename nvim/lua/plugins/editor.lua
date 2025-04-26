@@ -1,12 +1,12 @@
 return {
 	{
-		"nvim-lualine/lualine.nvim",
+		'nvim-lualine/lualine.nvim',
 		opts = {
 			options = {
 				icons_enabled = true,
-				theme = "auto",
-				component_separators = { left = "🯖", right = "" },
-				section_separators = { left = "🭛", right = "🭋" },
+				theme = 'auto',
+				component_separators = { left = '🯖', right = '' },
+				section_separators = { left = '🭛', right = '🭋' },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
@@ -21,23 +21,23 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
+				lualine_a = { 'mode' },
+				lualine_b = { 'branch', 'diff', 'diagnostics' },
 				lualine_c = {
 					{
-						"filename",
+						'filename',
 						path = 1,
 					},
 				},
-				lualine_x = { "encoding", "fileformat", "filetype" },
-				lualine_y = { "progress" },
-				lualine_z = { "location" },
+				lualine_x = { 'encoding', 'fileformat', 'filetype' },
+				lualine_y = { 'progress' },
+				lualine_z = { 'location' },
 			},
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { "filename" },
-				lualine_x = { "location" },
+				lualine_c = { 'filename' },
+				lualine_x = { 'location' },
 				lualine_y = {},
 				lualine_z = {},
 			},
@@ -49,7 +49,7 @@ return {
 	},
 
 	{
-		"nvim-tree/nvim-web-devicons",
+		'nvim-tree/nvim-web-devicons',
 		lazy = true,
 		opts = {
 			-- your personnal icons can go here (to override)
@@ -61,13 +61,13 @@ return {
 		},
 	},
 
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
-		indent = { char = "┊" },
+	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {
+		indent = { char = '┊' },
 	} },
 
 	{
-		"akinsho/bufferline.nvim",
-		version = "*",
+		'akinsho/bufferline.nvim',
+		version = '*',
 		enabled = false,
 		opts = {
 			options = {
@@ -79,43 +79,43 @@ return {
 		},
 	},
 
-	{ "NvChad/nvim-colorizer.lua", opts = {
-		user_default_options = { tailwind = true, mode = "virtualtext" },
+	{ 'NvChad/nvim-colorizer.lua', opts = {
+		user_default_options = { tailwind = true, mode = 'virtualtext' },
 	} },
 
-	{ "folke/zen-mode.nvim", event = { "VeryLazy" } },
+	{ 'folke/zen-mode.nvim', event = { 'VeryLazy' } },
 
 	-- markdown preview
 	{
-		"toppair/peek.nvim",
-		event = { "VeryLazy" },
-		build = "deno task --quiet build:fast",
+		'toppair/peek.nvim',
+		event = { 'VeryLazy' },
+		build = 'deno task --quiet build:fast',
 		config = function()
-			require("peek").setup()
+			require('peek').setup()
 			-- refer to `configuration to change defaults`
-			vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+			vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+			vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
 		end,
 	},
 	{
-		"MeanderingProgrammer/markdown.nvim",
-		name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		'MeanderingProgrammer/markdown.nvim',
+		name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+		dependencies = { 'nvim-treesitter/nvim-treesitter' },
 		config = function()
-			require("render-markdown").setup({})
+			require('render-markdown').setup({})
 		end,
 	},
 
 	{
-		"akinsho/toggleterm.nvim",
-		version = "*",
-		event = { "VeryLazy" },
+		'akinsho/toggleterm.nvim',
+		version = '*',
+		event = { 'VeryLazy' },
 		opts = {
 			size = 20,
 			open_mapping = [[<c-\>]],
-			direction = "float",
+			direction = 'float',
 			float_opts = {
-				border = "curved",
+				border = 'curved',
 				winblend = 0,
 			},
 		},

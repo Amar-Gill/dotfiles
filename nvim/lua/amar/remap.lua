@@ -1,4 +1,4 @@
-local Remap = require("amar.keymap")
+local Remap = require('amar.keymap')
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local xnoremap = Remap.xnoremap
@@ -7,7 +7,7 @@ local function edit_ghostty_config()
 	vim.cmd([[ e ~/dotfiles/ghostty/config ]])
 end
 
-nnoremap("<leader>gho", edit_ghostty_config)
+nnoremap('<leader>gho', edit_ghostty_config)
 
 local function delete_all_bufs_skip_current()
 	local current_bufnr = vim.api.nvim_get_current_buf()
@@ -18,42 +18,42 @@ local function delete_all_bufs_skip_current()
 		end
 	end
 	vim.schedule(function()
-		vim.cmd("mode")
+		vim.cmd('mode')
 	end)
 end
 
-nnoremap("<leader>bd", "<cmd>bd<CR>") -- delete current buffer
-nnoremap("<leader>bad", delete_all_bufs_skip_current) -- delete all buffers except current
-nnoremap("<leader>zm", ":ZenMode<CR>")
+nnoremap('<leader>bd', '<cmd>bd<CR>') -- delete current buffer
+nnoremap('<leader>bad', delete_all_bufs_skip_current) -- delete all buffers except current
+nnoremap('<leader>zm', ':ZenMode<CR>')
 
-nnoremap("<leader>w", "<C-w>") -- remap for window commands
+nnoremap('<leader>w', '<C-w>') -- remap for window commands
 
-nnoremap("<leader>bg", ':exec &bg=="light" ? "set bg=dark" : "set bg=light" <CR>') -- toggle light / dark bg
+nnoremap('<leader>bg', ':exec &bg=="light" ? "set bg=dark" : "set bg=light" <CR>') -- toggle light / dark bg
 
 -- stay in visual mode when indenting blocks of text
-vnoremap(">", ">gv")
-vnoremap("<", "<gv")
+vnoremap('>', '>gv')
+vnoremap('<', '<gv')
 
-nnoremap(">", ">>")
-nnoremap("<", "<<")
+nnoremap('>', '>>')
+nnoremap('<', '<<')
 
-nnoremap("<M-j>", ":m .+1<CR>")
-nnoremap("<M-k>", ":m .-2<CR>")
-vnoremap("<M-j>", ":m '>+1<CR><esc>gv")
-vnoremap("<M-k>", ":m '<-2<CR><esc>gv")
+nnoremap('<M-j>', ':m .+1<CR>')
+nnoremap('<M-k>', ':m .-2<CR>')
+vnoremap('<M-j>', ":m '>+1<CR><esc>gv")
+vnoremap('<M-k>', ":m '<-2<CR><esc>gv")
 
 -- quickfix list
-nnoremap("<leader>cq", ":cclose<CR>")
+nnoremap('<leader>cq', ':cclose<CR>')
 
 -- resize window with arrows
-nnoremap("<M-Up>", ":resize +2<CR>")
-nnoremap("<M-Down>", ":resize -2<CR>")
-nnoremap("<M-Left>", ":vertical resize -2<CR>")
-nnoremap("<M-Right>", ":vertical resize +2<CR>")
+nnoremap('<M-Up>', ':resize +2<CR>')
+nnoremap('<M-Down>', ':resize -2<CR>')
+nnoremap('<M-Left>', ':vertical resize -2<CR>')
+nnoremap('<M-Right>', ':vertical resize +2<CR>')
 
 -- clipboard remaps
 -- keep pasted value in clipboard when pasting over other text
-vnoremap("p", '"_dP')
-xnoremap("p", '"_dP')
+vnoremap('p', '"_dP')
+xnoremap('p', '"_dP')
 
-nnoremap("<leader>hl", "<cmd>set hlsearch!<CR>") -- toggle highlight search
+nnoremap('<leader>hl', '<cmd>set hlsearch!<CR>') -- toggle highlight search

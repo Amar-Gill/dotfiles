@@ -1,10 +1,10 @@
-require("ts_context_commentstring").setup({
+require('ts_context_commentstring').setup({
 	enable_autocmd = false,
 })
 
-require("nvim-ts-autotag").setup()
+require('nvim-ts-autotag').setup()
 
-require("nvim-treesitter.configs").setup({
+require('nvim-treesitter.configs').setup({
 	highlight = {
 		enable = true,
 		disable = {},
@@ -14,36 +14,36 @@ require("nvim-treesitter.configs").setup({
 		disable = {},
 	},
 	ensure_installed = {
-		"tsx",
-		"json",
-		"yaml",
-		"css",
-		"html",
-		"lua",
-		"typescript",
-		"go",
-		"gomod",
-		"markdown",
-		"markdown_inline",
-		"python",
-		"svelte",
-		"vue",
-		"dockerfile",
-		"make",
-		"rust",
-		"bash",
-		"sql",
-		"java",
-		"astro",
-		"ruby",
-		"elixir",
-		"hcl",
-		"zig",
+		'tsx',
+		'json',
+		'yaml',
+		'css',
+		'html',
+		'lua',
+		'typescript',
+		'go',
+		'gomod',
+		'markdown',
+		'markdown_inline',
+		'python',
+		'svelte',
+		'vue',
+		'dockerfile',
+		'make',
+		'rust',
+		'bash',
+		'sql',
+		'java',
+		'astro',
+		'ruby',
+		'elixir',
+		'hcl',
+		'zig',
 	},
 	autopairs = {
 		enable = true,
 	},
 })
 
-local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+parser_config.tsx.filetype_to_parsername = { 'javascript', 'typescript.tsx' }

@@ -1,13 +1,13 @@
 return {
 	{
-		"lewis6991/gitsigns.nvim",
+		'lewis6991/gitsigns.nvim',
 		opts = {
 			signs = {
-				add = { text = "▎" },
-				change = { text = "▎" },
-				delete = { text = "" },
-				topdelete = { text = "" },
-				changedelete = { text = "▎" },
+				add = { text = '▎' },
+				change = { text = '▎' },
+				delete = { text = '' },
+				topdelete = { text = '' },
+				changedelete = { text = '▎' },
 			},
 			signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
 			numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
@@ -21,7 +21,7 @@ return {
 			current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
 			current_line_blame_opts = {
 				virt_text = true,
-				virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+				virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
 				delay = 1000,
 				ignore_whitespace = false,
 			},
@@ -31,57 +31,57 @@ return {
 			max_file_length = 40000,
 			preview_config = {
 				-- Options passed to nvim_open_win
-				border = "rounded",
-				style = "minimal",
-				relative = "cursor",
+				border = 'rounded',
+				style = 'minimal',
+				relative = 'cursor',
 				row = 0,
 				col = 1,
 			},
 			on_attach = function(bufnr)
 				local gs = package.loaded.gitsigns
 
-				local nnoremap = require("amar.keymap").nnoremap
+				local nnoremap = require('amar.keymap').nnoremap
 
 				-- Navigation
-				nnoremap("]g", function()
+				nnoremap(']g', function()
 					if vim.wo.diff then
-						return "]c"
+						return ']c'
 					end
 					vim.schedule(function()
 						gs.next_hunk({ preview = true })
-						vim.cmd.normal("zz")
+						vim.cmd.normal('zz')
 					end)
-					return "<Ignore>"
+					return '<Ignore>'
 				end, { expr = true })
 
-				nnoremap("[g", function()
+				nnoremap('[g', function()
 					if vim.wo.diff then
-						return "[c"
+						return '[c'
 					end
 					vim.schedule(function()
 						gs.prev_hunk({ preview = true })
-						vim.cmd.normal("zz")
+						vim.cmd.normal('zz')
 					end)
-					return "<Ignore>"
+					return '<Ignore>'
 				end, { expr = true })
 
-				nnoremap("<leader>gsrh", function()
+				nnoremap('<leader>gsrh', function()
 					vim.schedule(function()
 						gs.reset_hunk()
 					end)
 				end)
 
-				nnoremap("<leader>gsrb", function()
+				nnoremap('<leader>gsrb', function()
 					vim.schedule(function()
 						gs.reset_buffer()
 					end)
 				end)
 
-				nnoremap("gp", function()
+				nnoremap('gp', function()
 					gs.preview_hunk()
 				end)
 
-				nnoremap("glb", function()
+				nnoremap('glb', function()
 					gs.blame_line()
 				end)
 			end,

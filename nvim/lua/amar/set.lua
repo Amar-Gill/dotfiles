@@ -1,6 +1,8 @@
 vim.o.background = "dark"
 
-vim.o.winborder = "rounded"
+-- https://github.com/nvim-lua/plenary.nvim/pull/649
+-- https://github.com/nvim-telescope/telescope.nvim/issues/3436
+vim.o.winborder = "none"
 
 vim.opt.guicursor = ""
 

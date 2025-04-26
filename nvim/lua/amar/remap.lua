@@ -24,8 +24,6 @@ end
 
 nnoremap("<leader>bd", "<cmd>bd<CR>") -- delete current buffer
 nnoremap("<leader>bad", delete_all_bufs_skip_current) -- delete all buffers except current
-nnoremap("<C-j>", ":bnext <CR>")
-nnoremap("<C-k>", ":bprev <CR>")
 nnoremap("<leader>zm", ":ZenMode<CR>")
 
 nnoremap("<leader>w", "<C-w>") -- remap for window commands
@@ -45,8 +43,6 @@ vnoremap("<M-j>", ":m '>+1<CR><esc>gv")
 vnoremap("<M-k>", ":m '<-2<CR><esc>gv")
 
 -- quickfix list
-nnoremap("]q", ":cnext<CR>")
-nnoremap("[q", ":cprev<CR>")
 nnoremap("<leader>cq", ":cclose<CR>")
 
 -- resize window with arrows

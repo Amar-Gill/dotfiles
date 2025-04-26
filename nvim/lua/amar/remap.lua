@@ -1,10 +1,10 @@
-local Remap = require('amar.keymap')
+local Remap = require 'amar.keymap'
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local xnoremap = Remap.xnoremap
 
 local function edit_ghostty_config()
-	vim.cmd([[ e ~/dotfiles/ghostty/config ]])
+	vim.cmd [[ e ~/dotfiles/ghostty/config ]]
 end
 
 nnoremap('<leader>gho', edit_ghostty_config)
@@ -18,7 +18,7 @@ local function delete_all_bufs_skip_current()
 		end
 	end
 	vim.schedule(function()
-		vim.cmd('mode')
+		vim.cmd 'mode'
 	end)
 end
 

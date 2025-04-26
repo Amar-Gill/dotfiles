@@ -3,9 +3,9 @@ return {
 		'stevearc/conform.nvim',
 		event = { 'VeryLazy' },
 		config = function()
-			local conform = require('conform')
+			local conform = require 'conform'
 
-			conform.setup({
+			conform.setup {
 				formatters_by_ft = {
 					lua = { 'stylua' },
 					python = { 'isort', 'black' },
@@ -28,10 +28,10 @@ return {
 						prepend_args = { '--indent-size', '2' },
 					},
 				},
-			})
+			}
 
 			require('amar.keymap').nnoremap('<leader>f', function()
-				conform.format({ async = true, lsp_format = 'fallback' })
+				conform.format { async = true, lsp_format = 'fallback' }
 			end)
 		end,
 	},

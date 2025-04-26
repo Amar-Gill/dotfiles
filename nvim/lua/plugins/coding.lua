@@ -76,7 +76,7 @@ return {
 			},
 			---Function to call before (un)comment
 			pre_hook = function(ctx)
-				local U = require('Comment.utils')
+				local U = require 'Comment.utils'
 
 				local location = nil
 				if ctx.ctype == U.ctype.blockwise then
@@ -85,10 +85,10 @@ return {
 					location = require('ts_context_commentstring.utils').get_visual_start_location()
 				end
 
-				return require('ts_context_commentstring.internal').calculate_commentstring({
+				return require('ts_context_commentstring.internal').calculate_commentstring {
 					key = ctx.ctype == U.ctype.linewise and '__default' or '__multiline',
 					location = location,
-				})
+				}
 			end,
 			---Function to call after (un)comment
 			post_hook = nil,

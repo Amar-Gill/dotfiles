@@ -1,4 +1,4 @@
-require('lspkind').init({
+require('lspkind').init {
 	-- defines how annotations are shown
 	-- default: symbol
 	-- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
@@ -41,4 +41,4 @@ require('lspkind').init({
 		Operator = '󰆕',
 		TypeParameter = '',
 	},
-})
+}

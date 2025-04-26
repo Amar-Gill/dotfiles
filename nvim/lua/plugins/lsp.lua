@@ -9,7 +9,7 @@ return {
 			'j-hui/fidget.nvim', -- LSP status updates
 		},
 		config = function()
-			require('amar.config.lsp')
+			require 'amar.config.lsp'
 		end,
 	},
 

@@ -41,10 +41,10 @@ local breadcrumbs = function(client, bufnr)
 		return
 	end
 
-	local navic = require('nvim-navic')
+	local navic = require 'nvim-navic'
 
 	if client.server_capabilities.documentSymbolProvider then
-		navic.setup({
+		navic.setup {
 			highlight = true,
 			icons = {
 				File = ' ',
@@ -74,7 +74,7 @@ local breadcrumbs = function(client, bufnr)
 				Operator = ' ',
 				TypeParameter = ' ',
 			},
-		})
+		}
 		navic.attach(client, bufnr)
 	end
 end
@@ -103,7 +103,7 @@ M.on_attach = function(client, bufnr)
 	breadcrumbs(client, bufnr)
 end
 
-local protocol = require('vim.lsp.protocol')
+local protocol = require 'vim.lsp.protocol'
 
 M.capabilities = require('cmp_nvim_lsp').default_capabilities(protocol.make_client_capabilities())
 

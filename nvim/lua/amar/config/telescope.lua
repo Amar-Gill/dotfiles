@@ -1,10 +1,10 @@
-local telescope = require('telescope')
-local actions = require('telescope.actions')
-local builtin = require('telescope.builtin')
+local telescope = require 'telescope'
+local actions = require 'telescope.actions'
+local builtin = require 'telescope.builtin'
 local nnoremap = require('amar.keymap').nnoremap
 
 local function telescope_buffer_dir()
-	return vim.fn.expand('%:p:h')
+	return vim.fn.expand '%:p:h'
 end
 
 local fb_actions = telescope.extensions.file_browser.actions
@@ -15,7 +15,7 @@ local fb_layout_config = {
 	prompt_position = 'top',
 }
 
-telescope.setup({
+telescope.setup {
 	defaults = {
 		mappings = {
 			n = {
@@ -39,7 +39,7 @@ telescope.setup({
 				-- your custom insert mode mappings
 				['i'] = {
 					['<C-w>'] = function()
-						vim.cmd('normal vbd')
+						vim.cmd 'normal vbd'
 					end,
 				},
 				['n'] = {
@@ -52,16 +52,16 @@ telescope.setup({
 			},
 		},
 	},
-})
+}
 
-telescope.load_extension('file_browser')
-telescope.load_extension('fzf')
+telescope.load_extension 'file_browser'
+telescope.load_extension 'fzf'
 
 nnoremap('|', function()
-	builtin.find_files({
+	builtin.find_files {
 		no_ignore = false,
 		hidden = true,
-	})
+	}
 end)
 
 nnoremap('<leader>pwr', function()
@@ -73,13 +73,13 @@ nnoremap('<leader>rg', function()
 end, { desc = '[R]ip[G]rep' })
 
 nnoremap('<leader>bf', function()
-	builtin.buffers({
+	builtin.buffers {
 		previewer = true,
 		sorting_strategy = 'ascending',
 		layout_config = {
 			prompt_position = 'top',
 		},
-	})
+	}
 end, { desc = '[B]u[F]fers' })
 
 nnoremap('<leader>\\', function()
@@ -87,9 +87,9 @@ nnoremap('<leader>\\', function()
 end)
 
 nnoremap('<leader>td', function()
-	builtin.diagnostics({
+	builtin.diagnostics {
 		initial_mode = 'normal',
-	})
+	}
 end, { desc = '[T]elescope [D]iagnostics' })
 
 nnoremap('<leader>ds', function()
@@ -97,49 +97,49 @@ nnoremap('<leader>ds', function()
 end, { desc = '[D]ocument [S]ymbols' })
 
 nnoremap('<leader>gst', function()
-	builtin.git_status({
+	builtin.git_status {
 		initial_mode = 'normal',
-	})
+	}
 end, { desc = '[G]it [S][T]atus' })
 
 nnoremap('<leader>cm', function()
-	builtin.git_commits({
+	builtin.git_commits {
 		initial_mode = 'normal',
-	})
+	}
 end, { desc = 'Git [C]o[M]mits' })
 
 nnoremap('<leader>bcm', function()
-	builtin.git_bcommits({
+	builtin.git_bcommits {
 		initial_mode = 'normal',
-	})
+	}
 end, { desc = '[B]uffer [C]o[M]mits' })
 
 nnoremap('tr', function()
-	builtin.lsp_references({
+	builtin.lsp_references {
 		initial_mode = 'normal',
-	})
+	}
 end, { desc = '[T]elescope LSP [R]eferences' })
 
 nnoremap('\\', function()
-	telescope.extensions.file_browser.file_browser({
+	telescope.extensions.file_browser.file_browser {
 		path = '%:p:h',
 		respect_gitignore = false,
 		hidden = true,
 		grouped = true,
 		layout_config = fb_layout_config,
-	})
+	}
 end)
 
 nnoremap('<leader>/', function()
-	builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
+	builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
 		winblend = 10,
 		previewer = false,
-	}))
+	})
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
 nnoremap('<leader>ht', builtin.help_tags, { desc = 'Search [H]elp [T]ags' })
 
 -- Shortcut for searching your Neovim configuration files
 nnoremap('<leader>nc', function()
-	builtin.find_files({ cwd = vim.fn.stdpath('config') })
+	builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = 'Search [N]eovim [C]onfig' })

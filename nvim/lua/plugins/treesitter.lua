@@ -7,7 +7,7 @@ return {
 			'windwp/nvim-ts-autotag',
 		},
 		config = function()
-			require('amar.config.treesitter')
+			require 'amar.config.treesitter'
 		end,
 	},
 

@@ -1,7 +1,7 @@
-local cmp = require('cmp')
-local lspkind = require('lspkind')
+local cmp = require 'cmp'
+local lspkind = require 'lspkind'
 
-cmp.setup({
+cmp.setup {
 	snippet = {
 		expand = function(args)
 			require('luasnip').lsp_expand(args.body)
@@ -11,12 +11,12 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
-	mapping = cmp.mapping.preset.insert({
+	mapping = cmp.mapping.preset.insert {
 		['<C-d>'] = cmp.mapping.scroll_docs(-4),
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
-		['<CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+		['<CR>'] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace, select = true }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 		-- read :help ins-completion for more info on why you might not want to to use tab to cycle through menu options
 		-- ["<Tab>"] = function(fallback)
 		--     if cmp.visible() then
@@ -32,21 +32,21 @@ cmp.setup({
 		--         fallback()
 		--     end
 		-- end,
-	}),
+	},
 	--    the order of your sources matter (by default). That gives them priority
 	--    you can configure:
 	--        keyword_length
 	--        priority
 	--        max_item_count
 	--        (more?)
-	sources = cmp.config.sources({
+	sources = cmp.config.sources {
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
 		{ name = 'buffer' },
 		{ name = 'path' },
-	}),
+	},
 	formatting = {
-		format = lspkind.cmp_format({
+		format = lspkind.cmp_format {
 			mode = 'symbol_text',
 			maxwidth = 50,
 			menu = {
@@ -57,11 +57,11 @@ cmp.setup({
 				-- gh_issues = "[issues]",
 				-- tn = "[TabNine]",
 			},
-		}),
+		},
 	},
-})
+}
 
-vim.cmd([[
+vim.cmd [[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
-]])
+]]

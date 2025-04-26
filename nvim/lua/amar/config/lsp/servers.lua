@@ -1,18 +1,18 @@
-local nvim_lsp = require('lspconfig')
+local nvim_lsp = require 'lspconfig'
 
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
-require('mason').setup({
+require('mason').setup {
 	ui = { border = 'rounded' },
-})
-require('mason-lspconfig').setup({
+}
+require('mason-lspconfig').setup {
 	automatic_installation = { exclude = { 'groovyls', 'gopls', 'solargraph', 'rust-analyzer' } },
-})
-local mason_registry = require('mason-registry')
+}
+local mason_registry = require 'mason-registry'
 
 local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
 	.. '/node_modules/@vue/language-server'
-local groovyls_dir = os.getenv('HOME') .. '/groovy-language-server/build/libs/groovy-language-server-all.jar'
+local groovyls_dir = os.getenv 'HOME' .. '/groovy-language-server/build/libs/groovy-language-server-all.jar'
 
 local servers = {
 	lua_ls = {
@@ -90,7 +90,7 @@ vim.api.nvim_create_autocmd('FileType', {
 	pattern = 'cadence',
 	callback = function()
 		local flow_project_dir = vim.fs.dirname(vim.fs.find({ 'flow.json' }, { upward = true })[1])
-		vim.lsp.start({
+		vim.lsp.start {
 			name = 'cadence-language-server',
 			cmd = { 'flow', 'cadence', 'language-server' },
 			root_dir = flow_project_dir,
@@ -100,6 +100,6 @@ vim.api.nvim_create_autocmd('FileType', {
 			},
 			on_attach = on_attach,
 			capabilities = capabilities,
-		})
+		}
 	end,
 })

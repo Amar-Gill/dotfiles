@@ -19,13 +19,13 @@ return {
 					'saadparwaiz1/cmp_luasnip', -- snippet completions
 				},
 				config = function()
-					require('amar.config.snippets')
+					require 'amar.config.snippets'
 				end,
 			},
 		},
 		config = function()
-			require('amar.config.lspkind')
-			require('amar.config.cmp')
+			require 'amar.config.lspkind'
+			require 'amar.config.cmp'
 		end,
 	},
 

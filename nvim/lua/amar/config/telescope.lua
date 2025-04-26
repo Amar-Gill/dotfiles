@@ -66,26 +66,21 @@ end)
 
 nnoremap("<leader>pwr", function()
 	builtin.grep_string()
-end)
+end, { desc = "[P]roject [W]ord [R]egex" })
 
 nnoremap("<leader>rg", function()
 	builtin.live_grep()
-end)
+end, { desc = "[R]ip[G]rep" })
 
 nnoremap("<leader>bf", function()
 	builtin.buffers({
-		previewer = false,
+		previewer = true,
 		sorting_strategy = "ascending",
 		layout_config = {
 			prompt_position = "top",
-			width = 0.37,
 		},
 	})
-end)
-
-nnoremap("<leader>tg", function()
-	builtin.help_tags()
-end)
+end, { desc = "[B]u[F]fers" })
 
 nnoremap("<leader>\\", function()
 	builtin.resume()
@@ -95,35 +90,35 @@ nnoremap("<leader>td", function()
 	builtin.diagnostics({
 		initial_mode = "normal",
 	})
-end)
+end, { desc = "[T]elescope [D]iagnostics" })
 
 nnoremap("<leader>ds", function()
 	builtin.lsp_document_symbols()
-end)
+end, { desc = "[D]ocument [S]ymbols" })
 
 nnoremap("<leader>gst", function()
 	builtin.git_status({
 		initial_mode = "normal",
 	})
-end)
+end, { desc = "[G]it [S][T]atus" })
 
 nnoremap("<leader>cm", function()
 	builtin.git_commits({
 		initial_mode = "normal",
 	})
-end)
+end, { desc = "Git [C]o[M]mits" })
 
 nnoremap("<leader>bcm", function()
 	builtin.git_bcommits({
 		initial_mode = "normal",
 	})
-end)
+end, { desc = "[B]uffer [C]o[M]mits" })
 
 nnoremap("tr", function()
 	builtin.lsp_references({
 		initial_mode = "normal",
 	})
-end)
+end, { desc = "[T]elescope LSP [R]eferences" })
 
 nnoremap("\\", function()
 	telescope.extensions.file_browser.file_browser({

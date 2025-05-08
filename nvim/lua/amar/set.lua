@@ -4,44 +4,44 @@ vim.o.background = 'dark'
 -- https://github.com/nvim-telescope/telescope.nvim/issues/3436
 vim.o.winborder = 'none'
 
-vim.opt.guicursor = ''
+vim.o.guicursor = ''
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.scrolloff = 16
+vim.o.nu = true
+vim.o.relativenumber = true
+vim.o.scrolloff = 16
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.incsearch = true
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.incsearch = true
 
-vim.opt.inccommand = 'split'
+vim.o.inccommand = 'split'
 
-vim.opt.smartindent = true
+vim.o.smartindent = true
 
-vim.opt.wrap = false
-vim.opt.sidescroll = 12
+vim.o.wrap = false
+vim.o.sidescroll = 12
 
 vim.g.mapleader = ' '
 
-vim.opt.cursorline = true
-vim.opt.hlsearch = true
+vim.o.cursorline = true
+vim.o.hlsearch = true
 
-vim.opt.termguicolors = true
+vim.o.termguicolors = true
 
-vim.opt.cmdheight = 1
+vim.o.cmdheight = 1
 
-vim.opt.laststatus = 3
+vim.o.laststatus = 3
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.opt.clipboard = 'unnamedplus'
+vim.o.clipboard = 'unnamedplus'
 
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
-vim.opt.updatetime = 300
+vim.o.updatetime = 300
 
 vim.g.skip_ts_context_commentstring_module = true

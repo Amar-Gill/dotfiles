@@ -8,9 +8,9 @@ require('mason').setup {
 require('mason-lspconfig').setup {
 	automatic_installation = { exclude = { 'groovyls', 'gopls', 'solargraph', 'rust-analyzer' } },
 }
-local mason_registry = require 'mason-registry'
 
-local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
+local vue_language_server_path = vim.fn.expand '$MASON/packages'
+	.. '/vue-language-server'
 	.. '/node_modules/@vue/language-server'
 local groovyls_dir = os.getenv 'HOME' .. '/groovy-language-server/build/libs/groovy-language-server-all.jar'
 
@@ -62,7 +62,7 @@ local servers = {
 	astro = {},
 	svelte = {},
 	solargraph = {},
-	volar = {},
+	vue_ls = {},
 	elixirls = {},
 	helm_ls = {},
 	prismals = {},

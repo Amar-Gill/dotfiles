@@ -1,7 +1,7 @@
 vim.diagnostic.config {
 	virtual_text = false,
-	virtual_lines = { current_line = true },
-	signs = {
+	virtual_lines = true and { current_line = true },
+	signs = true and {
 		text = {
 			[vim.diagnostic.severity.ERROR] = '',
 			[vim.diagnostic.severity.WARN] = '',

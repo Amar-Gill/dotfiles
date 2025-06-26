@@ -6,7 +6,19 @@ require('mason').setup {
 	ui = { border = 'rounded' },
 }
 require('mason-lspconfig').setup {
-	automatic_installation = { exclude = { 'groovyls', 'gopls', 'solargraph', 'rust-analyzer' } },
+	automatic_installation = {
+		'lua_ls',
+		'ts_ls',
+		'html',
+		'eslint',
+		'bashls',
+		'tailwindcss',
+		'helm_ls',
+		'pyright',
+		'vue_ls',
+		'yamlls',
+	},
+	automatic_enable = false,
 }
 
 local vue_language_server_path = vim.fn.expand '$MASON/packages'

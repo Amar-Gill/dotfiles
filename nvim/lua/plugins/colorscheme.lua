@@ -25,4 +25,7 @@ return {
 		lazy = true,
 		opts = { flavour = 'auto', background = { light = 'latte', dark = 'mocha' } },
 	},
+	{
+		'vague2k/vague.nvim',
+	},
 }

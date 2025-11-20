@@ -9,6 +9,8 @@ setopt MENU_COMPLETE
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+[ -s "/Users/$(whoami)/.bun/_bun" ] && source "/Users/$(whoami)/.bun/_bun"
+
 if type brew &>/dev/null
 then
   FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"

@@ -1,7 +1,3 @@
-local nvim_lsp = require 'lspconfig'
-
-require('lspconfig.ui.windows').default_options.border = 'rounded'
-
 require('mason').setup {
 	ui = { border = 'rounded' },
 }
@@ -94,7 +90,8 @@ for server, server_opts in pairs(servers) do
 	-- "keep" means server_opts is prioritized over base_opts if there is key name collision
 	local opts = vim.tbl_deep_extend('keep', server_opts, base_opts)
 
-	nvim_lsp[server].setup(opts)
+	vim.lsp.config(server, opts)
+	vim.lsp.enable(server)
 end
 
 -- special cases

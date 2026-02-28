@@ -79,9 +79,21 @@ return {
 		},
 	},
 
-	{ 'NvChad/nvim-colorizer.lua', opts = {
-		user_default_options = { tailwind = true, mode = 'virtualtext' },
-	} },
+	{
+		'NvChad/nvim-colorizer.lua',
+		opts = {
+			options = {
+				parsers = {
+					css = true, -- preset: enables names, hex, rgb, hsl, oklch
+					tailwind = { enable = true },
+				},
+				display = {
+					mode = 'virtualtext',
+					virtualtext = { position = 'after' },
+				},
+			},
+		},
+	},
 
 	{ 'folke/zen-mode.nvim', event = { 'VeryLazy' } },
 

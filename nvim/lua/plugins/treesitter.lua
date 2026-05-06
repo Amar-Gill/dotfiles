@@ -2,6 +2,8 @@ return {
 	{
 		'nvim-treesitter/nvim-treesitter',
 		build = ':TSUpdate',
+		branch = 'main',
+		lazy = false,
 		dependencies = {
 			'JoosepAlviste/nvim-ts-context-commentstring',
 			'windwp/nvim-ts-autotag',

@@ -27,4 +27,9 @@ return {
 	{
 		'vague2k/vague.nvim',
 	},
+	{
+		'thesimonho/kanagawa-paper.nvim',
+		lazy = true,
+		opts = { cache = true },
+	},
 }

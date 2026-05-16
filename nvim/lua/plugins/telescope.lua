@@ -1,3 +1,4 @@
+-- TODO Replace with Snacks.nvim
 return {
 	{
 		'nvim-telescope/telescope.nvim',

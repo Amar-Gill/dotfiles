@@ -6,7 +6,7 @@ return {
 			'ray-x/lsp_signature.nvim', -- show lsp signature in insert mode when calling a function
 			'williamboman/mason.nvim', -- external dependencies manager
 			'williamboman/mason-lspconfig.nvim',
-			'j-hui/fidget.nvim', -- LSP status updates
+			'j-hui/fidget.nvim', -- LSP status updates, TODO Replace with Snacks.nvim maybe?
 		},
 		config = function()
 			require 'amar.config.lsp'

@@ -23,8 +23,8 @@ local function delete_all_bufs_skip_current()
 end
 
 nnoremap('<leader>bd', '<cmd>bd<CR>') -- delete current buffer
-nnoremap('<leader>bad', delete_all_bufs_skip_current) -- delete all buffers except current
-nnoremap('<leader>zm', ':ZenMode<CR>')
+nnoremap('<leader>bad', delete_all_bufs_skip_current) -- delete all buffers except current, TODO Replace with Snacks.nvim
+nnoremap('<leader>zm', ':ZenMode<CR>') -- TODO Replace with Snacks.nvim
 
 nnoremap('<leader>w', '<C-w>') -- remap for window commands
 

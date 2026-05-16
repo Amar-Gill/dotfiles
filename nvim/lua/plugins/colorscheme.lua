@@ -13,7 +13,7 @@ return {
 		},
 		config = function(_, opts)
 			require('rose-pine').setup(opts)
-			vim.cmd [[colorscheme rose-pine]]
+			vim.cmd [[colorscheme tokyonight]]
 		end,
 	},
 	{ 'folke/tokyonight.nvim', lazy = true, opts = { style = 'night' } },
@@ -26,6 +26,7 @@ return {
 	},
 	{
 		'vague2k/vague.nvim',
+		opts = { transparent = true },
 	},
 	{
 		'thesimonho/kanagawa-paper.nvim',

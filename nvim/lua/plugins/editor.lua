@@ -61,9 +61,13 @@ return {
 		},
 	},
 
-	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {
-		indent = { char = '┊' },
-	} },
+	{
+		'lukas-reineke/indent-blankline.nvim', -- TODO Remove with Snacks.nvim
+		main = 'ibl',
+		opts = {
+			indent = { char = '┊' },
+		},
+	},
 
 	{
 		'akinsho/bufferline.nvim',
@@ -95,7 +99,7 @@ return {
 		},
 	},
 
-	{ 'folke/zen-mode.nvim', event = { 'VeryLazy' } },
+	{ 'folke/zen-mode.nvim', event = { 'VeryLazy' } }, -- TODO Remove with Snacks.nvim
 
 	-- markdown preview
 	{

@@ -117,19 +117,4 @@ return {
 			require('render-markdown').setup {}
 		end,
 	},
-
-	{
-		'akinsho/toggleterm.nvim',
-		version = '*',
-		event = { 'VeryLazy' },
-		opts = {
-			size = 20,
-			open_mapping = [[<c-\>]],
-			direction = 'float',
-			float_opts = {
-				border = 'curved',
-				winblend = 0,
-			},
-		},
-	},
 }

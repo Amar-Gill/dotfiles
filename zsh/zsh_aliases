@@ -63,6 +63,7 @@ function dc-fn() {
 alias dc="dc-fn"
 
 # kubernetes
+alias kubectl=kubecolor
 alias k="kubectl"
 
 # call this anytime to refetch completion

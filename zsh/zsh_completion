@@ -24,3 +24,6 @@ _rendercv_completion() {
 }
 
 compdef _rendercv_completion rendercv
+
+# Make "kubecolor" borrow the same completion logic as "kubectl"
+compdef kubecolor=kubectl

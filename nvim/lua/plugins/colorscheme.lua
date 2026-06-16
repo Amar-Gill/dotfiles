@@ -2,7 +2,7 @@ return {
 	{
 		'rose-pine/neovim',
 		name = 'rose-pine',
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		opts = {
 			-- dark_variant = "moon",
@@ -16,7 +16,16 @@ return {
 			vim.cmd [[colorscheme rose-pine]]
 		end,
 	},
-	{ 'folke/tokyonight.nvim', lazy = true, opts = { style = 'night' } },
+	{
+		'folke/tokyonight.nvim',
+		lazy = false,
+		priority = 1000,
+		opts = { style = 'night' },
+		config = function(_, opts)
+			require('tokyonight').setup(opts)
+			vim.cmd [[colorscheme tokyonight]]
+		end,
+	},
 	{ 'projekt0n/github-nvim-theme', lazy = true },
 	{
 		'catppuccin/nvim',
@@ -26,6 +35,7 @@ return {
 	},
 	{
 		'vague2k/vague.nvim',
+		lazy = true,
 	},
 	{
 		'thesimonho/kanagawa-paper.nvim',

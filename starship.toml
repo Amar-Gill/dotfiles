@@ -68,6 +68,7 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [kubernetes]
 disabled=false
+symbol = "☸"
 style = "bg:#212736"
 format = '[[ $symbol ($context)(\($namespace\)) ](fg:#769ff0 bg:#212736)]($style)'
 

@@ -13,6 +13,7 @@ require('mason-lspconfig').setup {
 		'pyright',
 		'vue_ls',
 		'yamlls',
+		'terraformls',
 	},
 	automatic_enable = false,
 }
@@ -76,6 +77,7 @@ local servers = {
 	prismals = {},
 	yamlls = {},
 	zls = {},
+	terraformls = {},
 }
 
 local on_attach = require('amar.config.lsp.handlers').on_attach

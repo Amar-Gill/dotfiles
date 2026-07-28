@@ -10,10 +10,7 @@ source ~/.zsh_completion
 
 autoload -Uz compinit && compinit
 
-if [ -f ~/.work_stuff.sh ]; then
-  . ~/.work_stuff.sh
-  source-kubectl-completion
-fi
+[ -f ~/.work_stuff.sh ] && source ~/.work_stuff.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

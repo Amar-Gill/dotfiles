@@ -1,2 +1,2 @@
 theme = dark:TokyoNight Night,light:TokyoNight Day
-keybind = global:cmd+backquote=toggle_quick_terminal
+macos-option-as-alt = true

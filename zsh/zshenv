@@ -1,6 +1,9 @@
 [[ ! -f $HOME/.cargo/env ]] || . "$HOME/.cargo/env"
 
 export EDITOR=nvim
+# manually configure default emacs keybindings but still have nvim as editor
+# because zsh will automatically switch to vim keybindings when $EDITOR or $VISUAL matches on "vi"
+bindkey -e
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
